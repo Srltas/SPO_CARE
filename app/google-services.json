@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "343492414367",
+    "firebase_url": "https://sunmoon2020-spo-care.firebaseio.com",
+    "project_id": "sunmoon2020-spo-care",
+    "storage_bucket": "sunmoon2020-spo-care.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:343492414367:android:153770bf2557d2deae0baa",
+        "android_client_info": {
+          "package_name": "com.example.spo_care"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "343492414367-sea34frgkg48o6f6jfnqcd3e69741mi8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.spo_care",
+            "certificate_hash": "fc41081c47c77070efa525e25eaf75c46e33a5a4"
+          }
+        },
+        {
+          "client_id": "343492414367-93tggs0cmf20nlf3isl5fbb55jjk031c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCGqaUPzxBvweDHNWzoqFvnFytaXeSB8I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "343492414367-93tggs0cmf20nlf3isl5fbb55jjk031c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
