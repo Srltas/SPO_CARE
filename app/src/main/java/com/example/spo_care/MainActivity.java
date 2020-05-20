@@ -4,6 +4,7 @@ package com.example.spo_care;
 import android.content.Intent;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.selftest_periodontl_disease);
 
         signInButton = findViewById(R.id.signInButton);
         mAuth = FirebaseAuth.getInstance();
