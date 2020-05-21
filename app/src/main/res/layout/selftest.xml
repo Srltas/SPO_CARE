@@ -3,16 +3,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#29ABE2"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="10dp"
-        android:orientation="horizontal">
+        android:background="#0071BC"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/activity_divide_line" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -24,14 +30,15 @@
             android:text="자가진단 테스트"
             android:textColor="#ffffff"
             android:textSize="35sp" />
-    </LinearLayout>
 
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/activity_divide_line" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/activity_divide_line" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -95,15 +102,4 @@
                 android:textSize="30dp" />
         </LinearLayout>
     </LinearLayout>
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:background="@drawable/login_btn_login"
-        android:fontFamily="@font/binggrae_bold"
-        android:text="돌아가기"
-        android:textColor="#ffffff"
-        android:textSize="25dp" />
 </LinearLayout>
