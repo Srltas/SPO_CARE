@@ -20,6 +20,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
     EditText editTextEmail;
     EditText editTextPassword;
+    EditText editTextPasswordCheck;
     Button createAccount;
     TextView returnLogin;
 
@@ -39,21 +40,29 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextEmail);
+        editTextPasswordCheck = (EditText) findViewById(R.id.editTextPasswordCheck);
         createAccount = (Button) findViewById(R.id.btnCreateAccount);
         returnLogin = (TextView) findViewById(R.id.returnLogin);
+
         createAccount.setOnClickListener(this);
     }
 
     private void registerUser(){
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String passwordCheck = editTextPasswordCheck.getText().toString().trim();
 
         if(TextUtils.isEmpty(email)){
             Toast.makeText(this, "email을 입력해 주세요", Toast.LENGTH_SHORT).show();
             return;
         }
+
         if(TextUtils.isEmpty(password)){
             Toast.makeText(this, "password를 입력해 주세요", Toast.LENGTH_SHORT).show();
+        }
+
+        if(!TextUtils.equals(password, passwordCheck)){
+            Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
         }
 
         firebaseAuth.createUserWithEmailAndPassword(email, password)
