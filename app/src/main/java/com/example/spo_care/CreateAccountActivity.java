@@ -43,7 +43,9 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextEmail);
         editTextPasswordCheck = (EditText) findViewById(R.id.editTextPasswordCheck);
+        //당장은 쓰지 않는 변수
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        //이것도 마찬가지
         editTextPhoneNumber = (EditText) findViewById(R.id.editTextPhoneNumber);
         createAccount = (Button) findViewById(R.id.btnCreateAccount);
         returnLogin = (TextView) findViewById(R.id.returnLogin);
