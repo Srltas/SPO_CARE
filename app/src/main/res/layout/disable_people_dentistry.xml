@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#29ABE2"
+    android:background="#AADFFF"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0071BC"
+        android:background="#90AFFF"
         android:orientation="vertical">
 
         <ImageView
@@ -143,7 +143,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/login_btn_login"
+                android:background="@drawable/btn_color"
                 android:text="장애인진료치과 찾기"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />

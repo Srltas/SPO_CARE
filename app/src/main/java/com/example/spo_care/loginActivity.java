@@ -5,11 +5,12 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.auth.FirebaseAuth;
 
 public class loginActivity extends AppCompatActivity implements View.OnClickListener {
     Button btnRevoke, btnLogout;
-    private FirebaseAuth mAuth ;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
