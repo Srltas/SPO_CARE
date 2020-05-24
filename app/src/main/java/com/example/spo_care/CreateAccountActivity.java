@@ -21,6 +21,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
     EditText editTextEmail;
     EditText editTextPassword;
     EditText editTextPasswordCheck;
+    EditText editTextUserName;
+    EditText editTextPhoneNumber;
     Button createAccount;
     TextView returnLogin;
 
@@ -41,6 +43,8 @@ public class CreateAccountActivity extends AppCompatActivity implements View.OnC
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextEmail);
         editTextPasswordCheck = (EditText) findViewById(R.id.editTextPasswordCheck);
+        editTextUserName = (EditText) findViewById(R.id.editTextUserName);
+        editTextPhoneNumber = (EditText) findViewById(R.id.editTextPhoneNumber);
         createAccount = (Button) findViewById(R.id.btnCreateAccount);
         returnLogin = (TextView) findViewById(R.id.returnLogin);
 
