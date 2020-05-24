@@ -1,0 +1,676 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#29ABE2"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#0071BC"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/activity_divide_line" />
+
+        <TextView
+            android:id="@+id/self_test_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/binggrae_bold"
+            android:gravity="center"
+            android:paddingRight="20dp"
+            android:text="치주질환 테스트"
+            android:textColor="#ffffff"
+            android:textSize="35sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/activity_divide_line" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--1번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="1. 당신의 연령은 어떻게 되십니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <com.example.spo_care.Scene.RadioGridGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20~29세"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="30~39세"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="40~49세"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="50~59세"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="60~69세"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n1_6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dp"
+                            android:text="70세 이상"
+                            android:textSize="15dp" />
+                    </TableRow>
+                </com.example.spo_care.Scene.RadioGridGroup>
+            </LinearLayout>
+
+            <!--2번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="2. 당신의 학력은 어떻게 되십니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n2_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="초졸 이하"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n2_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="중졸"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n2_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="고졸"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n2_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:text="대학교 졸업 이상"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--3번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="3. 평소 칫솔질 할 때 잇몸에서 피가 난 적이 있습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n3_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n3_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--4번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="4. 충치, 잇몸병 또는 치통 때문에 영구치를 7개 이상 발치한 경험이 있습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n4_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n4_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--5번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="5. 마취주사를 맞고 잇몸치료 또는 잇몸 수술을 받아보신 적이 있거나, 치료를 받기 위해 예약한 적이 있습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n5_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n5_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--6번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="6. 하루에 설탕이 든 과자, 설탕커피(믹스커피), 탄산음료를 얼마나 자주 먹습니까??"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n6_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="먹지 않음"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n6_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="1번"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n6_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="2~3번"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n6_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="4번 이상"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--7번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="7. 최근 1년간 구강질환 치료나 관리를 목적으로 치과병(의)원에 가신 적이 있습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n7_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n7_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--8번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="8. 지금까지 살아오는 동안 담배를 피운 경험이 있습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <com.example.spo_care.Scene.RadioGridGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n8_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="전혀 피운 적이 없다"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n8_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="현재 피우고 있다."
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n8_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="이전에 피웟으나 끊었다."
+                            android:textSize="15dp" />
+                    </TableRow>
+                </com.example.spo_care.Scene.RadioGridGroup>
+            </LinearLayout>
+
+            <!--9번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="9. 현재 당뇨병 또는 심혈관계 질환(고혈압, 고지혈증 포함)을 앓고 계십니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n9_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n9_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--10번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="10. 최근 일주일 동안, 잠자기 직전에 칫솔질을 얼마나 자주 하였습니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <com.example.spo_care.Scene.RadioGridGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n10_1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="항상 했다(7회)"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n10_2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="대부분 했다(4~6회)"
+                            android:textSize="15dp" />
+                    </TableRow>
+
+                    <TableRow>
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n10_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="가끔 했다(1~3회)"
+                            android:textSize="15dp" />
+
+                        <RadioButton
+                            android:id="@+id/periodontl_disease_n10_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:text="전혀 하지 않았다(0회)"
+                            android:textSize="15dp" />
+                    </TableRow>
+                </com.example.spo_care.Scene.RadioGridGroup>
+            </LinearLayout>
+
+            <!--11번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="11. 치아 사이를 닦기 위해 치실을 사용하십니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n11_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n11_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--12번 질문-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/test_background"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="12. 현재 치주질환을 가지고 있다고 생각하십니까?"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n12_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="있다"
+                        android:textSize="15dp" />
+
+                    <RadioButton
+                        android:id="@+id/periodontl_disease_n12_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:text="없다"
+                        android:textSize="15dp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/login_btn_login"
+                android:text="테스트 결과 확인하기"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

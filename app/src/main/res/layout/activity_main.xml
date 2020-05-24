@@ -1,9 +1,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:id="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/main_background"
     android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:=".MainActivity">
 
     <LinearLayout
@@ -35,6 +36,22 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="50dp"
         android:layout_marginRight="30dp"
+        android:gravity="center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
         android:gravity="center">
 
         <TableRow
@@ -43,41 +60,20 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/btnMyPage"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/my_page_icon" />
 
             <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/my_page_icon" />
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_marginLeft="20dp"
-                android:background="@drawable/my_page_icon" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:background="@drawable/my_page_icon" />
-
-            <ImageView
+                android:id="@+id/btnSelfTest"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/my_page_icon" />
 
             <ImageView
+                android:id="@+id/btnTeethCareItem"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="20dp"
@@ -91,22 +87,51 @@
             android:gravity="center">
 
             <ImageView
+                android:id="@+id/btnVisualImpairment"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:background="@drawable/my_page_icon" />
 
             <ImageView
+                android:id="@+id/btnBrainLesions"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/my_page_icon" />
 
             <ImageView
+                android:id="@+id/btnHearingImpairment"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/my_page_icon" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/btnDisablePeopleDentistry"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/my_page_icon" />
+
+            <ImageView
+                android:id="@+id/btnTeethBrushTimer"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/my_page_icon" />
+
+            <ImageView
+                android:id="@+id/btnMouthTraining"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginLeft="20dp"
                 android:background="@drawable/my_page_icon" />
         </TableRow>
     </TableLayout>
-
 </LinearLayout>
