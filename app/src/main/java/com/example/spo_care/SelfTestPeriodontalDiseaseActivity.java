@@ -1,10 +1,11 @@
 package com.example.spo_care;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class SelfTestPeriodontalDiseaseActivity extends AppCompatActivity {
+public class SelfTestPeriodontalDiseaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle saveInstanceState){
         super.onCreate(saveInstanceState);

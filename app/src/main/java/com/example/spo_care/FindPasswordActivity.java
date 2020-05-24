@@ -1,5 +1,6 @@
 package com.example.spo_care;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class FindPasswordActivity extends AppCompatActivity implements View.OnClickListener {
+public class FindPasswordActivity extends Activity implements View.OnClickListener {
     EditText editTextUserEmail;
     Button btnFindPassword;
     TextView returnLogin;

@@ -1,5 +1,6 @@
 package com.example.spo_care;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,7 +18,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class CreateAccountActivity extends AppCompatActivity implements View.OnClickListener {
+public class CreateAccountActivity extends Activity implements View.OnClickListener {
     EditText editTextEmail;
     EditText editTextPassword;
     EditText editTextPasswordCheck;
