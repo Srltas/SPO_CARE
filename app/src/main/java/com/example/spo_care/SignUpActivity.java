@@ -11,14 +11,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-public class CreateAccountActivity extends Activity implements View.OnClickListener {
+public class SignUpActivity extends Activity implements View.OnClickListener {
     EditText editTextEmail;
     EditText editTextPassword;
     EditText editTextPasswordCheck;
@@ -32,7 +31,7 @@ public class CreateAccountActivity extends Activity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.create_account);
+        setContentView(R.layout.signup);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -42,14 +41,14 @@ public class CreateAccountActivity extends Activity implements View.OnClickListe
         }
 
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextPasswordCheck = (EditText) findViewById(R.id.editTextPasswordCheck);
         //당장은 쓰지 않는 변수
         editTextUserName = (EditText) findViewById(R.id.editTextUserName);
         //이것도 마찬가지
         editTextPhoneNumber = (EditText) findViewById(R.id.editTextPhoneNumber);
         createAccount = (Button) findViewById(R.id.btnCreateAccount);
-        returnLogin = (TextView) findViewById(R.id.returnLogin);
+        //returnLogin = (TextView) findViewById(R.id.returnLogin);
 
         createAccount.setOnClickListener(this);
     }
@@ -80,7 +79,7 @@ public class CreateAccountActivity extends Activity implements View.OnClickListe
                             finish();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
-                            Toast.makeText(CreateAccountActivity.this, "등록에러", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUpActivity.this, "등록에러", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });

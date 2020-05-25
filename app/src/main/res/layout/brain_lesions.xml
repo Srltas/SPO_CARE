@@ -1,13 +1,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#29ABE2"
+    android:background="#AADBFF"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#0071BC"
+        android:background="#90AFFF"
         android:orientation="vertical">
 
         <ImageView
@@ -86,7 +86,7 @@
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
                     android:text="@string/brain_lesions_characteristic"
-                    android:textColor="#000000"
+                    android:textColor="#666666"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -130,7 +130,7 @@
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
                     android:text="@string/brain_lesions_precautions"
-                    android:textColor="#000000"
+                    android:textColor="#666666"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -175,10 +175,23 @@
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
                     android:text="@string/brain_lesions_tip"
-                    android:textColor="#000000"
+                    android:textColor="#666666"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/btn_color"
+                android:fontFamily="@font/binggrae_bold"
+                android:text="방문구강관리서비스"
+                android:textColor="#ffffff"
+                android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -12,21 +12,9 @@
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".FindPasswordActivity"/>
-        <activity android:name=".CreateAccountActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".BrainLesionsActivity"/>
-        <activity android:name=".DisablePeopleDentistry"/>
-        <activity android:name=".HearingImpairmentActivity"/>
-        <activity android:name=".SelfTestActivity"/>
-        <activity android:name=".SelfTestCavityActivity"/>
-        <activity android:name=".SelfTestPeriodontalDiseaseActivity"/>
-        <activity android:name=".TeethCareItemActivity"/>
-        <activity android:name=".VisualImpairmentActivity"/>
     </application>
 
 </manifest>

@@ -18,18 +18,23 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class FindPasswordActivity extends Activity implements View.OnClickListener {
     EditText editTextUserEmail;
+    EditText editTextUserName;
+    EditText editTextPhoneNumber;
+
     Button btnFindPassword;
-    TextView returnLogin;
+    //TextView returnLogin;
 
     FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.find_password);
+        setContentView(R.layout.find_pw);
 
-        editTextUserEmail = (EditText) findViewById(R.id.editTextEmail);
-        btnFindPassword = (Button) findViewById(R.id.buttonFind);
+        editTextUserEmail = (EditText) findViewById(R.id.textEmail);
+        editTextUserName = (EditText) findViewById(R.id.textUserName);
+        editTextPhoneNumber = (EditText) findViewById(R.id.textPhoneNumber);
+        btnFindPassword = (Button) findViewById(R.id.btnFindPassword);
         firebaseAuth = FirebaseAuth.getInstance();
 
         btnFindPassword.setOnClickListener(this);
