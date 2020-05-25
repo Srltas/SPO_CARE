@@ -7,28 +7,23 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import com.example.spo_care.CreateAccountActivity;
-import com.example.spo_care.FindPasswordActivity;
-import com.example.spo_care.MainActivity;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
-import org.w3c.dom.Text;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
     EditText loginTextEmail;
     EditText loginTextPassword;
     Button login;
-    TextView createAccount;
-    TextView findPassword;
-
+    Button createAccount;
+    Button findPassword;
+    Button findId;
     FirebaseAuth firebaseAuth;
 
     @Override
@@ -44,11 +39,12 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
 
-        loginTextEmail = (EditText) findViewById(R.id.loginTextEmail);
-        loginTextPassword = (EditText) findViewById(R.id.loginTextPassword);
-        login = (Button) findViewById(R.id.login);
-        createAccount = (TextView) findViewById(R.id.createAccount);
-        findPassword = (TextView) findViewById(R.id.findPassword);
+        loginTextEmail = (EditText) findViewById(R.id.textEmail);
+        loginTextPassword = (EditText) findViewById(R.id.textPassword);
+        login = (Button) findViewById(R.id.btnLogin);
+        createAccount = (Button) findViewById(R.id.btnCreateAccount);
+        findPassword = (Button) findViewById(R.id.btnFindPassword);
+        findId = (Button) findViewById(R.id.btnFindId);
 
         login.setOnClickListener(this);
         findPassword.setOnClickListener(this);
@@ -92,7 +88,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         if(view == createAccount) {
             finish();
             //계정생성 액티비티
-            startActivity(new Intent(this, CreateAccountActivity.class));
+            startActivity(new Intent(this, SignUpActivity.class));
         }
         if(view == findPassword) {
             finish();
