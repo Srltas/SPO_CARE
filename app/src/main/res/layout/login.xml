@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/login_background"
+    android:background="@drawable/background_login"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -13,7 +13,7 @@
         android:layout_marginTop="470dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/login_base_background"
+        android:background="@drawable/background_login_base"
         android:orientation="vertical">
 
         <LinearLayout

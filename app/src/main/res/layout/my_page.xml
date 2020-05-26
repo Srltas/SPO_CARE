@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/signup_background"
+    android:background="@drawable/background_signup"
     android:orientation="vertical"
     tools:context=".MyPageActivity">
 
@@ -78,7 +78,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/teeth_manage_icon" />
+                android:background="@drawable/icon_teeth_manage" />
         </LinearLayout>
 
         <LinearLayout
@@ -94,7 +94,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:background="@drawable/visital_alarm_icon" />
+                android:background="@drawable/icon_visital_alarm" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

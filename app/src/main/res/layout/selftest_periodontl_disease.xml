@@ -55,7 +55,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -77,6 +77,7 @@
                             android:id="@+id/periodontl_disease_n1_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#000000"
                             android:text="20~29세"
                             android:textSize="15dp" />
 
@@ -85,6 +86,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
+                            android:textColor="#000000"
                             android:text="30~39세"
                             android:textSize="15dp" />
 
@@ -93,6 +95,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
+                            android:textColor="#000000"
                             android:text="40~49세"
                             android:textSize="15dp" />
 
@@ -101,6 +104,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
+                            android:textColor="#000000"
                             android:text="50~59세"
                             android:textSize="15dp" />
                     </TableRow>
@@ -111,6 +115,7 @@
                             android:id="@+id/periodontl_disease_n1_5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:textColor="#000000"
                             android:text="60~69세"
                             android:textSize="15dp" />
 
@@ -119,6 +124,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="3dp"
+                            android:textColor="#000000"
                             android:text="70세 이상"
                             android:textSize="15dp" />
                     </TableRow>
@@ -132,7 +138,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -154,6 +160,7 @@
                         android:id="@+id/periodontl_disease_n2_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="초졸 이하"
                         android:textSize="15dp" />
 
@@ -162,6 +169,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:textColor="#000000"
                         android:text="중졸"
                         android:textSize="15dp" />
 
@@ -170,6 +178,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:textColor="#000000"
                         android:text="고졸"
                         android:textSize="15dp" />
 
@@ -178,6 +187,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
+                        android:textColor="#000000"
                         android:text="대학교 졸업 이상"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -190,7 +200,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -213,6 +223,7 @@
                         android:id="@+id/periodontl_disease_n3_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -221,6 +232,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -233,7 +245,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -256,6 +268,7 @@
                         android:id="@+id/periodontl_disease_n4_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -264,6 +277,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -276,7 +290,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -299,6 +313,7 @@
                         android:id="@+id/periodontl_disease_n5_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -307,6 +322,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -319,7 +335,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -342,6 +358,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
                         android:text="먹지 않음"
                         android:textSize="15dp" />
 
@@ -350,6 +367,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
                         android:text="1번"
                         android:textSize="15dp" />
 
@@ -358,6 +376,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
                         android:text="2~3번"
                         android:textSize="15dp" />
 
@@ -366,6 +385,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
+                        android:textColor="#000000"
                         android:text="4번 이상"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -378,7 +398,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -401,6 +421,7 @@
                         android:id="@+id/periodontl_disease_n7_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -409,6 +430,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -421,7 +443,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -444,6 +466,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="전혀 피운 적이 없다"
                             android:textSize="15dp" />
 
@@ -452,6 +475,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="현재 피우고 있다."
                             android:textSize="15dp" />
                     </TableRow>
@@ -462,6 +486,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="이전에 피웟으나 끊었다."
                             android:textSize="15dp" />
                     </TableRow>
@@ -475,7 +500,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -498,6 +523,7 @@
                         android:id="@+id/periodontl_disease_n9_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -506,6 +532,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -518,7 +545,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -541,6 +568,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="항상 했다(7회)"
                             android:textSize="15dp" />
 
@@ -549,6 +577,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="대부분 했다(4~6회)"
                             android:textSize="15dp" />
                     </TableRow>
@@ -559,6 +588,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="가끔 했다(1~3회)"
                             android:textSize="15dp" />
 
@@ -567,6 +597,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
+                            android:textColor="#000000"
                             android:text="전혀 하지 않았다(0회)"
                             android:textSize="15dp" />
                     </TableRow>
@@ -580,7 +611,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -603,6 +634,7 @@
                         android:id="@+id/periodontl_disease_n11_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -611,6 +643,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>
@@ -623,7 +656,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/test_background"
+                android:background="@drawable/background_test"
                 android:orientation="vertical">
 
                 <TextView
@@ -646,6 +679,7 @@
                         android:id="@+id/periodontl_disease_n12_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="#000000"
                         android:text="있다"
                         android:textSize="15dp" />
 
@@ -654,6 +688,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="70dp"
+                        android:textColor="#000000"
                         android:text="없다"
                         android:textSize="15dp" />
                 </RadioGroup>

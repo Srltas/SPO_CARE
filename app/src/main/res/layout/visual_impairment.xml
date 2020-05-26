@@ -81,7 +81,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/test_background"
+                    android:background="@drawable/background_test"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/test_background"
+                    android:background="@drawable/background_test"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
 
@@ -169,7 +169,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/test_background"
+                    android:background="@drawable/background_test"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
