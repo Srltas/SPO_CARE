@@ -67,6 +67,7 @@
                 android:background="@drawable/survey" />
 
             <TextView
+                android:id="@+id/cavityTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -93,6 +94,7 @@
                 android:background="@drawable/survey" />
 
             <TextView
+                android:id="@+id/periodontalDiseaseTest"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

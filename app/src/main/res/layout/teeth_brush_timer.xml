@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/teeth_brush_timer_background"
     android:orientation="vertical"
-    tools:context=".loginActivity">
+    tools:context=".TeethCareItemActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
