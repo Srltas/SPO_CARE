@@ -33,12 +33,13 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         firebaseAuth = FirebaseAuth.getInstance();
 
+        /*
         if(firebaseAuth.getCurrentUser() != null){
             finish();
             //후에 추가해줄 메인화면
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
-
+        */
         loginTextEmail = (EditText) findViewById(R.id.textEmail);
         loginTextPassword = (EditText) findViewById(R.id.textPassword);
         login = (Button) findViewById(R.id.btnLogin);
