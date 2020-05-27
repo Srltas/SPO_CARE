@@ -17,7 +17,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -36,7 +36,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,9 +56,10 @@
 
             <ImageButton
                 android:id="@+id/thumbnail_1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:background="@drawable/video1"
                 android:layout_marginTop="30dp" />
 
             <TextView
@@ -81,9 +82,10 @@
 
             <ImageButton
                 android:id="@+id/thumbnail_2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:background="@drawable/video2"
                 android:layout_marginTop="30dp" />
 
             <TextView
@@ -115,9 +117,10 @@
 
             <ImageButton
                 android:id="@+id/thumbnail_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:background="@drawable/video3"
                 android:layout_marginTop="30dp" />
 
             <TextView
@@ -140,9 +143,10 @@
 
             <ImageButton
                 android:id="@+id/thumbnail_4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
                 android:layout_gravity="center"
+                android:background="@drawable/video4"
                 android:layout_marginTop="30dp" />
 
             <TextView

@@ -13,7 +13,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="80dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/top_corner_black_box">
+        android:background="@drawable/box_top_corner_black">
 
         <TextView
             android:layout_width="match_parent"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/bottom_corner_gray_box"
+        android:background="@drawable/box_bottom_corner_gray"
         android:orientation="vertical">
     </LinearLayout>
 </LinearLayout>

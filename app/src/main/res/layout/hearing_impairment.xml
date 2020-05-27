@@ -17,7 +17,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -36,7 +36,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <ScrollView
@@ -84,7 +84,7 @@
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
-                    android:background="@drawable/background_test"
+                    android:background="@drawable/box_selftest_whitet"
                     android:text="@string/hearing_impairment_characteristic"
                     android:textColor="#666666"
                     android:textSize="20sp"
@@ -124,7 +124,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/background_test"
+                    android:background="@drawable/box_selftest_whitet"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
 
@@ -169,7 +169,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/background_test"
+                    android:background="@drawable/box_selftest_whitet"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"

@@ -17,7 +17,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -36,7 +36,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <ScrollView
@@ -297,7 +297,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:fontFamily="@font/binggrae_bold"
                 android:text="돌아가기"
                 android:textColor="#ffffff"

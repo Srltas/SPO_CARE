@@ -19,7 +19,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -38,7 +38,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
 

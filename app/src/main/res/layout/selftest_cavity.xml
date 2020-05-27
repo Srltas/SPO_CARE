@@ -17,7 +17,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -36,7 +36,7 @@
             android:layout_marginBottom="20dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <ScrollView
@@ -55,7 +55,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -140,7 +140,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -202,7 +202,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -247,7 +247,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -292,7 +292,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -337,7 +337,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -400,7 +400,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -445,7 +445,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -490,7 +490,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -535,7 +535,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -604,7 +604,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -649,7 +649,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/background_test"
+                android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
                 <TextView
@@ -713,6 +713,7 @@
             </LinearLayout>
 
             <Button
+                android:id="@+id/btnSelfTestCavityResult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -720,7 +721,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:text="테스트 결과 확인하기"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />
