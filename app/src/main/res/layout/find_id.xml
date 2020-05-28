@@ -41,6 +41,7 @@
             android:orientation="vertical">
 
             <EditText
+                android:id="@+id/findIdName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -49,12 +50,23 @@
                 android:inputType="textEmailAddress" />
 
             <EditText
+                android:id="@+id/findIdPhoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
                 android:hint="전화번호"
                 android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/findIdResult"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:ems="10"
+                android:hint="아이디"
+                android:inputType="textPassword" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -66,6 +78,7 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnFindId"
                 android:layout_width="200dp"
                 android:layout_height="50dp"
                 android:background="@drawable/btn_color"
