@@ -29,6 +29,7 @@
         <activity android:name=".TeethBrushTimerActivity"/>
         <activity android:name=".TeethCareItemActivity"/>
         <activity android:name=".VisualImpairmentActivity"/>
+        <activity android:name=".MouthTraining"/>
 
     </application>
 

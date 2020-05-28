@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="@drawable/login_background"
+    android:background="@drawable/background_login"
     android:orientation="vertical"
     tools:context=".LoginActivity">
 
@@ -13,7 +13,7 @@
         android:layout_marginTop="470dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/login_base_background"
+        android:background="@drawable/box__login_base"
         android:orientation="vertical">
 
         <LinearLayout
@@ -30,8 +30,8 @@
 
                 <EditText
                     android:id="@+id/textEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:ems="10"
                     android:hint="Email"
@@ -39,8 +39,8 @@
 
                 <EditText
                     android:id="@+id/textPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:ems="10"
                     android:hint="Password"
@@ -49,11 +49,11 @@
 
             <Button
                 android:id="@+id/btnLogin"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="5dp"
-                android:background="@drawable/btn_color"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/box_btn_color"
                 android:text="LOGIN"
                 android:textColor="#FFFFFF"
                 android:textSize="20dp" />
@@ -63,7 +63,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -73,10 +73,10 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:text="회원가입"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp" />
+                android:textSize="14dp" />
 
             <Button
                 android:id="@+id/btnFindId"
@@ -84,10 +84,10 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:text="아이디찾기"
                 android:textColor="#FFFFFF"
-                android:textSize="17dp" />
+                android:textSize="14dp" />
 
             <Button
                 android:id="@+id/btnFindPassword"
@@ -95,7 +95,7 @@
                 android:layout_height="50dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="5dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:text="비밀번호찾기"
                 android:textColor="#FFFFFF"
                 android:textSize="14dp" />

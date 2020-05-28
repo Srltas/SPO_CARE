@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,7 +17,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
 
         <TextView
             android:id="@+id/self_test_title"
@@ -35,7 +36,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <ScrollView
@@ -81,7 +82,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/test_background"
+                    android:background="@drawable/box_selftest_whitet"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
@@ -122,18 +123,19 @@
                         android:textSize="25sp" />
                 </LinearLayout>
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/test_background"
-                    android:paddingLeft="20dp"
-                    android:paddingTop="10dp"
-                    android:paddingRight="20dp"
-                    android:text="@string/disable_people_dentistry_hospitallntroduce"
-                    android:textColor="#000000"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/box_selftest_whitet"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:paddingRight="20dp"
+                android:text="@string/disable_people_dentistry_hospitallntroduce"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="match_parent"
@@ -143,7 +145,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="30dp"
                 android:layout_marginBottom="20dp"
-                android:background="@drawable/btn_color"
+                android:background="@drawable/box_btn_color"
                 android:text="장애인진료치과 찾기"
                 android:textColor="#ffffff"
                 android:textSize="20sp" />

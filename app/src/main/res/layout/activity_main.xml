@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:id="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/main_background"
+    android:background="@drawable/background_main"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
@@ -28,7 +28,7 @@
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/activity_divide_line" />
+            android:background="@drawable/box_line_white" />
     </LinearLayout>
 
     <TableLayout
@@ -48,21 +48,21 @@
                 android:id="@+id/btnMyPage"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:background="@drawable/my_page_icon" />
+                android:background="@drawable/icon_my_page" />
 
             <ImageView
                 android:id="@+id/btnSelfTest"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/selftest_icon" />
+                android:background="@drawable/icon_selftest" />
 
             <ImageView
                 android:id="@+id/btnTeethCareItem"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/teeth_care_icon" />
+                android:background="@drawable/icon_teeth_care" />
         </TableRow>
 
         <TableRow
@@ -75,21 +75,21 @@
                 android:id="@+id/btnVisualImpairment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:background="@drawable/visual_icon" />
+                android:background="@drawable/icon_visual" />
 
             <ImageView
                 android:id="@+id/btnBrainLesions"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/brain_icon" />
+                android:background="@drawable/icon_brain" />
 
             <ImageView
                 android:id="@+id/btnHearingImpairment"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/hearing_icon" />
+                android:background="@drawable/icon_hearing" />
         </TableRow>
 
         <TableRow
@@ -102,21 +102,21 @@
                 android:id="@+id/btnDisablePeopleDentistry"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
-                android:background="@drawable/hospital_location_icon" />
+                android:background="@drawable/icon_hospital_location" />
 
             <ImageView
                 android:id="@+id/btnTeethBrushTimer"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/timer_icon" />
+                android:background="@drawable/icon_timer" />
 
             <ImageView
                 android:id="@+id/btnMouthTraining"
                 android:layout_width="130dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
-                android:background="@drawable/training_icon" />
+                android:background="@drawable/icon_training" />
         </TableRow>
     </TableLayout>
 
