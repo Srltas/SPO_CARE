@@ -52,9 +52,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -85,7 +85,7 @@
                             android:id="@+id/periodontl_disease_n1_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginLeft="4dp"
                             android:textColor="#000000"
                             android:text="30~39세"
                             android:textSize="15dp" />
@@ -94,7 +94,7 @@
                             android:id="@+id/periodontl_disease_n1_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginLeft="4dp"
                             android:textColor="#000000"
                             android:text="40~49세"
                             android:textSize="15dp" />
@@ -103,7 +103,7 @@
                             android:id="@+id/periodontl_disease_n1_4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginLeft="4dp"
                             android:textColor="#000000"
                             android:text="50~59세"
                             android:textSize="15dp" />
@@ -123,7 +123,7 @@
                             android:id="@+id/periodontl_disease_n1_6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="3dp"
+                            android:layout_marginLeft="4dp"
                             android:textColor="#000000"
                             android:text="70세 이상"
                             android:textSize="15dp" />
@@ -135,9 +135,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -152,6 +152,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -197,9 +198,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -214,6 +215,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -259,6 +261,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -287,9 +290,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -304,6 +307,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -332,9 +336,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -349,6 +354,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
@@ -395,9 +401,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -412,6 +418,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -440,9 +447,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -480,14 +487,17 @@
                             android:textSize="15dp" />
                     </TableRow>
 
-                    <TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
                         <RadioButton
                             android:id="@+id/periodontl_disease_n8_3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginLeft="10dp"
-                            android:textColor="#000000"
                             android:text="이전에 피웟으나 끊었다."
+                            android:textColor="#000000"
                             android:textSize="15dp" />
                     </TableRow>
                 </com.example.spo_care.Scene.RadioGridGroup>
@@ -497,9 +507,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -514,6 +524,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n9"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -542,9 +553,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -608,9 +619,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -625,6 +636,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n11"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
@@ -653,9 +665,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginRight="10dp"
                 android:background="@drawable/box_selftest_whitet"
                 android:orientation="vertical">
 
@@ -670,6 +682,7 @@
                     android:textStyle="bold" />
 
                 <RadioGroup
+                    android:id="@+id/periodontal_n12"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
