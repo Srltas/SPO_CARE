@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+    //뒤로가기 2번 누를 시 종료를 위해 시간을 체크하는 변수
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
 
