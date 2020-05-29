@@ -59,7 +59,7 @@ public class FindIdActivity extends Activity implements View.OnClickListener {
             Toast.makeText(this,"전화번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
             return;
         }
-        db.collection("Users").whereEqualTo("name",userName)
+        db.collection("Users").whereEqualTo("name",userName).whereEqualTo("phoneNumber",phoneNumber)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override

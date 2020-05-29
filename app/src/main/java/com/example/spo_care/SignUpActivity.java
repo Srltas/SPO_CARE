@@ -68,6 +68,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
 
         createAccount.setOnClickListener(this);
     }
+//TODO 이메일 인증 기능 추가하기
 
     private void registerUser(){
         final String email = editTextEmail.getText().toString().trim();
@@ -104,7 +105,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                             user.put("name",name);
                             user.put("phoneNumber",phoneNumber);
 
-                            fireDatabase.collection("Users").document(name)
+                            fireDatabase.collection("Users").document(email)
                                     .set(user)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
