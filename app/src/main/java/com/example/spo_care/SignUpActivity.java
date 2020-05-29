@@ -20,6 +20,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.proto.TargetGlobal;
 
@@ -82,10 +83,12 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
 
         if(TextUtils.isEmpty(password)){
             Toast.makeText(this, "password를 입력해 주세요", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         if(!TextUtils.equals(password, passwordCheck)){
             Toast.makeText(this, "비밀번호가 일치하지 않습니다.", Toast.LENGTH_SHORT).show();
+            return;
         }
 
         firebaseAuth.createUserWithEmailAndPassword(email, password)
@@ -97,15 +100,16 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
 
                             //추후 마이페이지에서 사용하기 위해 DB로 값을 전달하는 부분이 될 예정
                             Map<String, String> user = new HashMap<>();
+                            user.put("id",email);
                             user.put("name",name);
                             user.put("phoneNumber",phoneNumber);
 
-                            fireDatabase.collection(email)
-                                    .add(user)
-                                    .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            fireDatabase.collection("Users").document(name)
+                                    .set(user)
+                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
                                         @Override
-                                        public void onSuccess(DocumentReference documentReference) {
-                                            Log.d(TAG, "문서 래퍼런스 : "+documentReference.getId());
+                                        public void onSuccess(Void aVoid) {
+                                            Log.d(TAG, "문서 작성완료 되었습니다.");
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
@@ -114,6 +118,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                                             Log.w(TAG,"에러 발생 : ", e);
                                         }
                                     });
+
                             finish();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
                         } else {
