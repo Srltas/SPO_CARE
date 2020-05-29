@@ -49,13 +49,13 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
         fireDatabase = FirebaseFirestore.getInstance();
 
         /*
-
         //로그인 기록이 존재하면 바로 메인 화면으로 넘어가게 함
         if(firebaseAuth.getCurrentUser() != null){
             finish();
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
         }
         */
+
         editTextEmail = (EditText) findViewById(R.id.editTextEmail);
         editTextPassword = (EditText) findViewById(R.id.editTextPassword);
         editTextPasswordCheck = (EditText) findViewById(R.id.editTextPasswordCheck);
