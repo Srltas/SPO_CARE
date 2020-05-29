@@ -63,7 +63,7 @@ public class SelfTestCavityActivity extends Activity {
 
         }
     };
-
+//TODO 대화상자 이미지 넣기
     //대화상자
     /*public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
