@@ -87,12 +87,15 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             userLogin();
         }
         if(view == createAccount) {
-            finish();
             //계정생성 액티비티
             startActivity(new Intent(this, SignUpActivity.class));
         }
+        if(view == findId){
+            //아이디 찾기 액티비티
+            startActivity(new Intent(this, LoginActivity.class));
+        }
+
         if(view == findPassword) {
-            finish();
             //비밀번호 찾기 액티비티
             startActivity(new Intent(this, FindPasswordActivity.class));
         }

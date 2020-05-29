@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,7 +26,7 @@ public class FindIdActivity extends Activity implements View.OnClickListener {
 
     EditText findIdName;
     EditText findIdPhoneNumber;
-    EditText findIdResult;
+    TextView findIdResult;
     Button btnFindId;
     FirebaseFirestore fireDatabase;
     private static final String TAG = "FindIdActivity";
@@ -39,7 +40,7 @@ public class FindIdActivity extends Activity implements View.OnClickListener {
         findIdName = (EditText) findViewById(R.id.findIdName);
         findIdPhoneNumber = (EditText) findViewById(R.id.findIdPhoneNumber);
         btnFindId = (Button) findViewById(R.id.btnFindId);
-        findIdResult = (EditText) findViewById(R.id.findIdResult);
+        findIdResult = (TextView) findViewById(R.id.findIdResult);
 
         btnFindId.setOnClickListener(this);
         fireDatabase.getInstance();
