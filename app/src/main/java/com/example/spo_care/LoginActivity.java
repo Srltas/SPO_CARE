@@ -49,6 +49,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
 
         login.setOnClickListener(this);
         findPassword.setOnClickListener(this);
+        findId.setOnClickListener(this);
         createAccount.setOnClickListener(this);
     }
 
@@ -92,7 +93,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         }
         if(view == findId){
             //아이디 찾기 액티비티
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, FindIdActivity.class));
         }
 
         if(view == findPassword) {
