@@ -4,26 +4,30 @@ apply plugin: 'com.google.gms.google-services'
 android {
     compileSdkVersion 28
     defaultConfig {
+        ndk{
+            abiFilters 'armeabi','arm-v8a'
+        }
+
         applicationId "com.example.spo_care"
         minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        multiDexEnabled defaultMultiDexEnabled1
+        multiDexEnabled true
     }
     buildTypes {
         release {
             minifyEnabled false
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexEnabled = true
         }
     }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //implementation 'com.android.support:appcompat:1.0.2'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.appcompat:appcompat:1.0.2'
@@ -34,7 +38,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.google.android.gms:play-services-auth:17.0.0'
     implementation 'com.google.firebase:firebase-firestore:21.2.1'
-
     testImplementation 'junit:junit:4.12'
+    implementation files('libs/libDaumMapAndroid.jar')
 }
 apply plugin: 'com.google.gms.google-services'
