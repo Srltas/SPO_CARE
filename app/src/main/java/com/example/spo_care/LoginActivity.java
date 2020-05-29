@@ -18,6 +18,10 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
 
+    //뒤로가기 2번 누를 시 종료를 위해 시간을 체크하는 변수
+    private final long FINISH_INTERVAL_TIME = 2000;
+    private long backPressedTime = 0;
+
     EditText loginTextEmail;
     EditText loginTextPassword;
     Button login;
@@ -100,6 +104,20 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         if(view == findPassword) {
             //비밀번호 찾기 액티비티
             startActivity(new Intent(this, FindPasswordActivity.class));
+        }
+    }
+
+    //뒤로가기 2번 누를 시 종료
+    @Override
+    public void onBackPressed(){
+        long tempTime = System.currentTimeMillis();
+        long intervalTime = tempTime - backPressedTime;
+
+        if(0 <= intervalTime && FINISH_INTERVAL_TIME >= intervalTime){
+            super.onBackPressed();
+        } else{
+            backPressedTime = tempTime;
+            Toast.makeText(getApplicationContext(), "한번 더 뒤로가기를 누르면 종료됩니다.", Toast.LENGTH_SHORT).show();
         }
     }
 }
