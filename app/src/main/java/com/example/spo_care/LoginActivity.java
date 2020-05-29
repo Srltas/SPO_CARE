@@ -48,6 +48,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         findId = (Button) findViewById(R.id.btnFindId);
 
         login.setOnClickListener(this);
+        findId.setOnClickListener(this);
         findPassword.setOnClickListener(this);
         findId.setOnClickListener(this);
         createAccount.setOnClickListener(this);

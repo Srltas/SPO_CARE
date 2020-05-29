@@ -43,13 +43,13 @@ public class FindIdActivity extends Activity implements View.OnClickListener {
         findIdResult = (TextView) findViewById(R.id.findIdResult);
 
         btnFindId.setOnClickListener(this);
-        fireDatabase.getInstance();
+
     }
 
     private void findId(){
+        FirebaseFirestore db = fireDatabase.getInstance();
         String userName = findIdName.getText().toString().trim();
         String phoneNumber = findIdPhoneNumber.getText().toString().trim();
-        DocumentReference docRef = fireDatabase.collection(phoneNumber).document("UserInfo");
 
         if (TextUtils.isEmpty(userName)){
             Toast.makeText(this,"이름을 입력해 주세요", Toast.LENGTH_SHORT).show();
@@ -59,7 +59,7 @@ public class FindIdActivity extends Activity implements View.OnClickListener {
             Toast.makeText(this,"전화번호를 입력해 주세요", Toast.LENGTH_SHORT).show();
             return;
         }
-        fireDatabase.collection("Users").whereEqualTo("name",userName)
+        db.collection("Users").whereEqualTo("name",userName)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
