@@ -9,6 +9,14 @@ import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreS1;
@@ -24,6 +32,11 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
 
     double scoreS2, scoreS3, scoreS4, scoreS5, scoreS6, scoreS7, scoreS9, scoreS11, scoreS12;
     double total;
+
+    FirebaseAuth fbAuth;
+    FirebaseUser fbUser;
+
+    String email;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -51,6 +64,19 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         radiogroupNumber9.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber11.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber12.setOnCheckedChangeListener(checkRadioGroup);
+
+        fbUser = fbAuth.getInstance().getCurrentUser();
+        if (fbUser != null) {
+            email = fbUser.getEmail();
+        }
+    }
+
+    private void saveTestResult() {
+        Map<String, Double> data = new HashMap<>();
+        data.put("score", total);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(email).set(data, SetOptions.merge());
     }
 
     Button.OnClickListener listener = new Button.OnClickListener(){
