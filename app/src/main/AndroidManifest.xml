@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Black.NoTitleBar">
-        <activity android:name=".MapLayoutTestActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -34,7 +34,7 @@
         <activity android:name=".TeethCareItemActivity"/>
         <activity android:name=".VisualImpairmentActivity"/>
         <activity android:name=".MouthTraining"/>
-        <activity android:name=".LoginActivity"/>
+        <activity android:name=".MapLayoutTestActivity"/>
 
         <meta-data android:name="com.kakao.sdk.AppKey"
             android:value="ed0db75d891f3dc572001ed83733bf36"/>
