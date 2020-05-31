@@ -100,10 +100,11 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                             Toast.makeText(SignUpActivity.this, "계정 생성 성공. DB로 데이터를 넘깁니다.", Toast.LENGTH_SHORT).show();
 
                             //추후 마이페이지에서 사용하기 위해 DB로 값을 전달하는 부분이 될 예정
-                            Map<String, String> user = new HashMap<>();
+                            Map<String, Object> user = new HashMap<>();
                             user.put("id",email);
                             user.put("name",name);
                             user.put("phoneNumber",phoneNumber);
+                            user.put("testCounter",0);
 
                             fireDatabase.collection("Users").document(email)
                                     .set(user)

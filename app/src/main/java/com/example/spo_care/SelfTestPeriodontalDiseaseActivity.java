@@ -6,12 +6,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
 import java.util.HashMap;
@@ -35,8 +41,11 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
 
     FirebaseAuth fbAuth;
     FirebaseUser fbUser;
+    FirebaseFirestore db;
 
     String email;
+    String value;
+    Integer testCounter;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -69,6 +78,29 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         if (fbUser != null) {
             email = fbUser.getEmail();
         }
+    }
+
+    //TODO 결과값을 저장하면서 카운트 하는 부분을 만들어야됨
+
+    private void getTextResultCounter() {
+        db = FirebaseFirestore.getInstance();
+        db.collection("Users").whereEqualTo("email", email)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (DocumentSnapshot docSnap : queryDocumentSnapshots.getDocuments()){
+                            value = docSnap.get("testCounter").toString();
+                            testCounter = Integer.parseInt(value);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(SelfTestPeriodontalDiseaseActivity.this,"유효한 탐색 결과가 없습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
     private void saveTestResult() {
