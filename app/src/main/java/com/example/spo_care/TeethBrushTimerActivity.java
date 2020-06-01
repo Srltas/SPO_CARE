@@ -12,10 +12,10 @@ import android.widget.TextView;
 
 
 public class TeethBrushTimerActivity extends Activity implements View.OnClickListener{
-    TextView countView, teethBrushText;
+    TextView countView, teethBrushText, brushTimerTitle;
     Button btnStart;
     Boolean startCheck = false; //타이머 중복 실행 방지
-    LinearLayout firstLayout, secondLayout;
+    LinearLayout firstLayout, secondLayout, timer;
     ImageView teethBrushImage;
 
 
@@ -30,9 +30,13 @@ public class TeethBrushTimerActivity extends Activity implements View.OnClickLis
         secondLayout = (LinearLayout) findViewById(R.id.secondLayout);
         teethBrushText = (TextView) findViewById(R.id.teethBrushText);
         teethBrushImage = (ImageView) findViewById(R.id.teethBrushImage);
+        timer = (LinearLayout) findViewById(R.id.timer);
+        brushTimerTitle = (TextView) findViewById(R.id.brushTimerTitle);
 
         firstLayout.setVisibility(View.VISIBLE);
         secondLayout.setVisibility(View.INVISIBLE);
+        timer.setVisibility(View.INVISIBLE);
+        brushTimerTitle.setVisibility(View.VISIBLE);
 
         btnStart.setOnClickListener(this);
     }
@@ -44,6 +48,8 @@ public class TeethBrushTimerActivity extends Activity implements View.OnClickLis
                 startCheck = true;
                 firstLayout.setVisibility(View.INVISIBLE);
                 secondLayout.setVisibility(View.VISIBLE);
+                timer.setVisibility(View.VISIBLE);
+                brushTimerTitle.setVisibility(View.INVISIBLE);
                 //3분30초
                 String conversionTime = "000330";
                 countDown(conversionTime);
@@ -115,7 +121,8 @@ public class TeethBrushTimerActivity extends Activity implements View.OnClickLis
             public void onFinish(){
                 firstLayout.setVisibility(View.VISIBLE);
                 secondLayout.setVisibility(View.INVISIBLE);
-                countView.setText("3:30");
+                timer.setVisibility(View.INVISIBLE);
+                brushTimerTitle.setVisibility(View.VISIBLE);
                 startCheck = false;
             }
         }.start();
