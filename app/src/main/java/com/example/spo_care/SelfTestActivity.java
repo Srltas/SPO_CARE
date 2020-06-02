@@ -20,7 +20,7 @@ public class SelfTestActivity extends Activity {
         cavityTest = findViewById(R.id.cavityTest);
         periodontalDiseaseTest = findViewById(R.id.periodontalDiseaseTest);
 
-        View.OnClickListener listenr = new View.OnClickListener(){
+        View.OnClickListener listener = new View.OnClickListener(){
             @Override
             public void onClick(View view){
                 switch(view.getId()){
@@ -35,7 +35,7 @@ public class SelfTestActivity extends Activity {
                 }
             }
         };
-        cavityTest.setOnClickListener(listenr);
-        periodontalDiseaseTest.setOnClickListener(listenr);
+        cavityTest.setOnClickListener(listener);
+        periodontalDiseaseTest.setOnClickListener(listener);
     }
 }

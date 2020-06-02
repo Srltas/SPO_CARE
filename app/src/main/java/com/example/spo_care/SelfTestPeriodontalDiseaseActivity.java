@@ -6,8 +6,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
@@ -24,6 +38,14 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
 
     double scoreS2, scoreS3, scoreS4, scoreS5, scoreS6, scoreS7, scoreS9, scoreS11, scoreS12;
     double total;
+
+    FirebaseAuth fbAuth;
+    FirebaseUser fbUser;
+    FirebaseFirestore db;
+
+    String email;
+    String value;
+    Integer testCounter;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -51,6 +73,44 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         radiogroupNumber9.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber11.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber12.setOnCheckedChangeListener(checkRadioGroup);
+
+        fbUser = fbAuth.getInstance().getCurrentUser();
+        if (fbUser != null) {
+            email = fbUser.getEmail();
+        }
+    }
+
+    //TODO 결과값을 저장하면서 카운트 하는 부분을 만들어야됨
+
+    private void getTextResultCounter() {
+        db = FirebaseFirestore.getInstance();
+        db.collection("Users").whereEqualTo("email", email)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (DocumentSnapshot docSnap : queryDocumentSnapshots.getDocuments()){
+                            value = docSnap.get("testCounter").toString();
+                            testCounter = Integer.parseInt(value);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(SelfTestPeriodontalDiseaseActivity.this,"유효한 탐색 결과가 없습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void saveTestResult() {
+        getTextResultCounter();
+        testCounter = testCounter % 5;
+        Map<String, Double> data = new HashMap<>();
+        data.put("score"+testCounter, total);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(email).set(data, SetOptions.merge());
     }
 
     Button.OnClickListener listener = new Button.OnClickListener(){
