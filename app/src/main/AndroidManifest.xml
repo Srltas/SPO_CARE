@@ -34,7 +34,9 @@
         <activity android:name=".TeethBrushTimerActivity"/>
         <activity android:name=".TeethCareItemActivity"/>
         <activity android:name=".VisualImpairmentActivity"/>
-        <activity android:name=".VideoViewController"/>
+        <activity android:name=".VideoViewController"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".MouthTraining"/>
         <activity android:name=".MapLayoutTestActivity"/>
 
