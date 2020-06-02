@@ -6,7 +6,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@drawable/background_signup"
-    tools:context=".MapLayoutTestActivity">
+    tools:context=".MapViewActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -32,11 +32,13 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/box_bottom_corner_gray">
+
         <RelativeLayout
             android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="450dp">
         </RelativeLayout>
+
     </LinearLayout>
 
     <LinearLayout
@@ -58,30 +60,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnSeoul"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="서울대"/>
 
             <Button
+                android:id="@+id/btnWonju"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="강를원주대"/>
 
             <Button
+                android:id="@+id/btnDankook1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="단국대(용인)"/>
 
             <Button
+                android:id="@+id/btnJeonnam"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="전남대"/>
 
             <Button
+                android:id="@+id/btnKyungpook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
@@ -95,30 +102,35 @@
             android:orientation="horizontal">
 
             <Button
+                android:id="@+id/btnBusan"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="부산대"/>
 
             <Button
+                android:id="@+id/btnGachon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="가천대"/>
 
             <Button
+                android:id="@+id/btnJeonbuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="전북대"/>
 
             <Button
+                android:id="@+id/btnJeju"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:text="제주대"/>
 
             <Button
+                android:id="@+id/btnDankook2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
