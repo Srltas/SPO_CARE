@@ -34,8 +34,6 @@ public class MapViewActivity extends Activity implements View.OnClickListener {
         super.onCreate(saveInstanceState);
         setContentView(R.layout.map_view);
 
-
-
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
         mapViewContainer.addView(mapView);
 
