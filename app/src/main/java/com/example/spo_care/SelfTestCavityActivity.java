@@ -64,6 +64,9 @@ public class SelfTestCavityActivity extends Activity {
         }
     };
 
+    //TODO 결과값을 저장하면서 카운트 하는 부분을 만들어야됨
+
+
     //대화상자
     /*public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
