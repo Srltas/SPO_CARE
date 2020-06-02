@@ -12,11 +12,12 @@ import android.widget.TextView;
 
 
 public class TeethBrushTimerActivity extends Activity implements View.OnClickListener{
-    TextView countView, teethBrushText, brushTimerTitle;
-    Button btnStart;
-    Boolean startCheck = false; //타이머 중복 실행 방지
-    LinearLayout firstLayout, secondLayout, timer;
-    ImageView teethBrushImage;
+    private TextView countView, teethBrushText, brushTimerTitle;
+    private Button btnStart;
+    private LinearLayout firstLayout, secondLayout, timer;
+    private ImageView teethBrushImage;
+    private Boolean startCheck = false; //타이머 중복 실행 방지
+    private CountDownTimer countTimer;
 
 
     @Override
@@ -79,7 +80,7 @@ public class TeethBrushTimerActivity extends Activity implements View.OnClickLis
 
         //첫 번째 인자 : 원하는 시간 (예를들어 30초면 30 x 1000(주기))
         //두 번째 인자 : 주기(1000 = 1초)
-        new CountDownTimer(conversionTime, 1000) {
+        countTimer = new CountDownTimer(conversionTime, 1000) {
             int count = 0, imageId;
             String time;    //분 + 초를 합치 문자열
             String[] timeList = {"329", "315", "300", "245", "230", "215", "200", "145", "130", "115", "100", "45", "30", "15"};
@@ -126,5 +127,14 @@ public class TeethBrushTimerActivity extends Activity implements View.OnClickLis
                 startCheck = false;
             }
         }.start();
+    }
+
+    //엑티비티 종료 시 카운트 다운 취소
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(countTimer != null){
+            countTimer.cancel();
+        }
     }
 }
