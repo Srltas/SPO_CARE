@@ -46,20 +46,20 @@
 
             <ImageView
                 android:id="@+id/btnMyPage"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:background="@drawable/icon_my_page" />
 
             <ImageView
                 android:id="@+id/btnSelfTest"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_selftest" />
 
             <ImageView
                 android:id="@+id/btnTeethCareItem"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_teeth_care" />
@@ -68,25 +68,25 @@
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:gravity="center">
 
             <ImageView
                 android:id="@+id/btnVisualImpairment"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:background="@drawable/icon_visual" />
 
             <ImageView
                 android:id="@+id/btnBrainLesions"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_brain" />
 
             <ImageView
                 android:id="@+id/btnHearingImpairment"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_hearing" />
@@ -100,20 +100,20 @@
 
             <ImageView
                 android:id="@+id/btnDisablePeopleDentistry"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:background="@drawable/icon_hospital_location" />
 
             <ImageView
                 android:id="@+id/btnTeethBrushTimer"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_timer" />
 
             <ImageView
                 android:id="@+id/btnMouthTraining"
-                android:layout_width="130dp"
+                android:layout_width="110dp"
                 android:layout_height="130dp"
                 android:layout_marginLeft="10dp"
                 android:background="@drawable/icon_training" />

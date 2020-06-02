@@ -2,14 +2,11 @@ package com.example.spo_care;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
@@ -60,21 +57,26 @@ public class SelfTestCavityActivity extends Activity {
         @Override
         public void onClick(View view) {
             total = scoreN1 + scoreN2 + scoreN3 + scoreN4 + scoreN5 + scoreN6 + scoreN7 + scoreN8 + scoreN9 + scoreN10 + scoreN11 + scoreN12;
-
+            createDialog();
         }
     };
 
-    //TODO 결과값을 저장하면서 카운트 하는 부분을 만들어야됨
 
+    public void createDialog() {
+        AlertDialog.Builder alertadd = new AlertDialog.Builder(SelfTestCavityActivity.this);
+        LayoutInflater facotry = LayoutInflater.from(SelfTestCavityActivity.this);
+        final View view = facotry.inflate(R.layout.test, null);
+        alertadd.setView(view);
+        alertadd.setTitle("결과 확인");
+        alertadd.setMessage("당신의 충치 위험도는 1단계인 저위험 단계입니다!!");
+        alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
 
-    //대화상자
-    /*public Dialog onCreateDialog(Bundle savedInstanceState) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        LayoutInflater inflater = requireActivity().getLayoutInflater();
-
-        builder.setView(inflater.inflate(R.layout.test, null));
-        return builder.create();
-    }*/
+            }
+        });
+        alertadd.show();
+    }
 
     RadioGroup.OnCheckedChangeListener checkRadioGroup = new RadioGroup.OnCheckedChangeListener(){
         @Override

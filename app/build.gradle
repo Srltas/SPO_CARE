@@ -26,6 +26,11 @@ android {
     }
 }
 
+//막대그래프
+repositories {
+    maven{url"https://jitpack.io"}
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //implementation 'com.android.support:appcompat:1.0.2'
@@ -40,5 +45,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.2.1'
     testImplementation 'junit:junit:4.12'
     implementation files('libs/libDaumMapAndroid.jar')
+    //막대그래프
+    compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
 }
 apply plugin: 'com.google.gms.google-services'

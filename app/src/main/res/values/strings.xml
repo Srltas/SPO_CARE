@@ -183,4 +183,19 @@
         * 인터넷 예약 불가\n
       - 진료문의 : 대표전화 041-550-0114, 센터전화 041-550-0311\n\n
     </string>
+    
+    <string name="teethBrush1">오른쪽 뒤를 닦아요~</string>
+    <string name="teethBrush2">아래도 닦아요~</string>
+    <string name="teethBrush3">안쪽도 닦아요~</string>
+    <string name="teethBrush4">아래쪽도 닦아요~</string>
+    <string name="teethBrush5">이제 위 앞니를 닦아요~</string>
+    <string name="teethBrush6">아래 앞니도 닦아요~</string>
+    <string name="teethBrush7">앞니 안쪽도 닦아요~</string>
+    <string name="teethBrush8">아래쪽도 똑같이 닦아요~</string>
+    <string name="teethBrush9">이제 왼쪽 위를 닦아요~</string>
+    <string name="teethBrush10">왼쪽 아래도 닦아요~</string>
+    <string name="teethBrush11">위 안쪽도 닦아요~</string>
+    <string name="teethBrush12">아래쪽도 닦아요~</string>
+    <string name="teethBrush13">씹는 면을 쓱싹쓱싹 닦아요~</string>
+    <string name="teethBrush14">아래쪽도 똑같이 닦아요~</string>
 </resources>

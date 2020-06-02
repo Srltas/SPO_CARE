@@ -32,7 +32,83 @@
         android:layout_marginTop="5dp"
         android:layout_marginRight="20dp"
         android:background="@drawable/box_my_page"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:text="가입정보"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="아이디 : "/>
+            <TextView
+                android:id="@+id/myPageId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="이름 : "/>
+            <TextView
+                android:id="@+id/myPageName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="전화번호 : "/>
+            <TextView
+                android:id="@+id/myPagePhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:text="예약 날짜까지 : "/>
+            <TextView
+                android:id="@+id/dDayCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +123,13 @@
             android:layout_marginRight="5dp"
             android:layout_weight="1"
             android:background="@drawable/box_my_page"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart1"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -56,7 +138,12 @@
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/box_my_page"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical">
+            <com.github.mikephil.charting.charts.BarChart
+                android:id="@+id/chart2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
@@ -92,6 +179,7 @@
             android:orientation="vertical">
 
             <ImageView
+                android:id="@+id/visitAlarm"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:background="@drawable/icon_visital_alarm" />

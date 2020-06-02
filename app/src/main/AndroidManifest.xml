@@ -12,13 +12,14 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Black.NoTitleBar">
-        <activity android:name=".LoginActivity">
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar">
+        <activity android:name=".IntroActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"/>
         <activity android:name=".BrainLesionsActivity"/>
         <activity android:name=".DisablePeopleDentistry"/>
         <activity android:name=".FindIdActivity"/>
@@ -33,6 +34,9 @@
         <activity android:name=".TeethBrushTimerActivity"/>
         <activity android:name=".TeethCareItemActivity"/>
         <activity android:name=".VisualImpairmentActivity"/>
+        <activity android:name=".VideoViewController"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity android:name=".MouthTraining"/>
         <activity android:name=".SeoulUnivMapActivity"/>
 
