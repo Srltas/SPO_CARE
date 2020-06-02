@@ -133,7 +133,6 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view){
         if(view == createAccount) {
-            finish();
             registerUser();
         }
 
