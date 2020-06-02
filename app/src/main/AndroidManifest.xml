@@ -34,6 +34,7 @@
         <activity android:name=".TeethBrushTimerActivity"/>
         <activity android:name=".TeethCareItemActivity"/>
         <activity android:name=".VisualImpairmentActivity"/>
+        <activity android:name=".VideoViewController"/>
         <activity android:name=".MouthTraining"/>
         <activity android:name=".MapLayoutTestActivity"/>
 

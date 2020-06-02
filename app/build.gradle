@@ -47,5 +47,6 @@ dependencies {
     implementation files('libs/libDaumMapAndroid.jar')
     //막대그래프
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
+    implementation files('libs\\YouTubeAndroidPlayerApi.jar')
 }
 apply plugin: 'com.google.gms.google-services'
