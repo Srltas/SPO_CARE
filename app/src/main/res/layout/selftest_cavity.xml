@@ -55,7 +55,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -138,7 +138,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -201,7 +201,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -247,7 +247,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -293,7 +293,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -339,7 +339,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -403,7 +403,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -449,7 +449,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -495,7 +495,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -541,7 +541,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -607,7 +607,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView
@@ -653,7 +653,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/box_selftest_whitet"
+                android:background="@drawable/box_selftest_white"
                 android:orientation="vertical">
 
                 <TextView

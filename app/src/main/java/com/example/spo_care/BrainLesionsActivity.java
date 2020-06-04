@@ -46,4 +46,13 @@ public class BrainLesionsActivity extends Activity implements View.OnClickListen
             }
         }
     }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if(mediaPlayer != null){
+            mediaPlayer.stop();
+            mediaPlayer.reset();
+        }
+    }
 }

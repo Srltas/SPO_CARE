@@ -198,4 +198,30 @@
     <string name="teethBrush12">아래쪽도 닦아요~</string>
     <string name="teethBrush13">씹는 면을 쓱싹쓱싹 닦아요~</string>
     <string name="teethBrush14">아래쪽도 똑같이 닦아요~</string>
+
+    <!--itemName-->
+    <string name="itemNumber1">Easy grip 칫솔</string>
+    <string name="itemNumber2">360도 원형 칫솔</string>
+    <string name="itemNumber3">치실</string>
+    <string name="itemNumber4">치간칫솔</string>
+    <string name="itemNumber5">구강양치액</string>
+    <string name="itemNumber6">치약</string>
+    <string name="itemNumber7">전동흡입칫솔</string>
+    <string name="itemNumber8">구강세정기</string>
+    <string name="itemNumber9">혀 클리너</string>
+
+    <string name="item1">- 트랙 형상의 손잡이가 있어 칫솔을 떨어뜨릴 걱정이 없습니다.\n\n - 악력이 약한 사람은 물론 재활중인 환자, 손가락 장애인도 쉽게 사용 가능합니다.\n\n - 칫솔모가
+    칫솔의 중심축에 있어 칫솔을 뒤집을 때 거리감이 거의 없습니다.</string>
+    <string name="itme2">- 칫솔질이 어렵고 힘든 거동이 불편한 환자분들을 위해 적합한 제품입니다.\n\n - 최소한의 손의 움직임과, 어떠한 각도로 입안에 넣어도 칫솔질이 가능합니다.\n\
+         - 칫솔머리부분 전체가 부드러운 극세모로 이루어져 잇몸질환 또는 턱관절이 불편한 분들에게 입안에 상처, 부담을 주지 않고 칫솔질이 가능합니다.</string>
+    <string name="itme3"> - 양치 후에 치아 사이사이에 남아있는 치석과 세균막을 제거해 줍니다.\n\n 치아사이가 벌어지고 염증이 생길 수 있는 이쑤시개에 비해 안전하고 위생적입니다.\n\n
+  - 대부분 사람은 칫솔과 치약을 사용해 양치질하지만, 치아와 잇몸이 건강해도 양치질을 하는 것만으로는 부족합니다. 치아는 그 형태가 다양하고, 배열이 불규칙한 경우가 대부분이기 때문에 칫솔이 닿지 않는 부분들이 있어 치실이 꼭 필요합니다.\n\n
+  - 장점으로 칫솔만 사용하여 양치만 하는 것보다 충치 예방 효과가 40% 이상 높습니다.\n\n
+  - 일반적으로 끊어서 사용하는 치실은 손동작이 익숙하지 않은 어린이, 장애인은 사용하기 힘들 뿐만 아니라 보호자의 큰 손을 아이 입에 넣어 사용하기 힘듭니다.\n\n
+        따라서 손잡이형 치실을 사용하면 보다 쉽고 깔끔하게 치아 사이를 청결히 할 수 있습니다.</string>
+    <string name="itme4"> - 칫솔 끝에 작은 솔을 치아 사이에 넣어 닦는 제품으로, 양치 후에 치아 사이 사이에 남아있는 치태와 음식물잔사를 제거해 줍니다.\n\n
+        잇몸이 많이 내려가 치아 뿌리부분의 사이가 넓거나 교정장치를 장착한 분들이 사용하면 좋습니다.\n\n
+  - 치아 간 폭은 개인에 따라 차이가 있으므로 자신에게 맞는 사이즈의 치간칫솔을 사용하는 것이 좋습니다.\n\n
+        치아 간 폭이 좁아 치간칫솔 사용이 어려운 분들에게는 치실 사용을 권장합니다.</string>
+
 </resources>

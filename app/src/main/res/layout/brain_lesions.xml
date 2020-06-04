@@ -57,34 +57,44 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/icon_brain_lesions_characteristic"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
-                        android:background="@drawable/icon_voice_service" />
+                        android:background="@drawable/survey"/>
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_marginLeft="10dp"
                         android:layout_marginBottom="5dp"
                         android:fontFamily="@font/binggrae_bold"
                         android:text="특징"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+                    <ImageView
+                        android:id="@+id/icon_brain_lesions_characteristic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/box_selftest_whitet"
+                    android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
@@ -128,7 +138,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/box_selftest_whitet"
+                    android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
@@ -173,7 +183,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/box_selftest_whitet"
+                    android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
                     android:paddingRight="20dp"
