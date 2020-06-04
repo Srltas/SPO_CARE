@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
+import java.util.GregorianCalendar;
+
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
 
@@ -22,6 +24,7 @@ public class SelfTestCavityActivity extends Activity {
 
     double scoreN2, scoreN3, scoreN4, scoreN5, scoreN6, scoreN7, scoreN8, scoreN9, scoreN11, scoreN12;
     double total;
+    int year, month;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -64,16 +67,37 @@ public class SelfTestCavityActivity extends Activity {
 
     public void createDialog() {
         AlertDialog.Builder alertadd = new AlertDialog.Builder(SelfTestCavityActivity.this);
-        LayoutInflater facotry = LayoutInflater.from(SelfTestCavityActivity.this);
-        final View view = facotry.inflate(R.layout.test,null);
-        alertadd.setView(view);
+        alertadd.setView(selectResult(total));
+        getDate();
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                
+                //TODO 여기다가 점수(total) 날짜 (year, month) 변수들을 너가 만든 함수에 넣으면 돼
             }
         });
         alertadd.show();
+    }
+
+    public View selectResult(double score){
+        View view;
+        LayoutInflater facotry = LayoutInflater.from(SelfTestCavityActivity.this);
+        if(score >= 11){
+            view = facotry.inflate(R.layout.selftest_result_4,null);
+        }else if(score >= 7){
+            view = facotry.inflate(R.layout.selftest_result_3,null);
+        }else if(score >= 5){
+            view = facotry.inflate(R.layout.selftest_result_2,null);
+        }else {
+            view = facotry.inflate(R.layout.selftest_result_1,null);
+        }
+        return view;
+    }
+
+    public void getDate(){
+        GregorianCalendar today = new GregorianCalendar();
+
+        year = today.get(today.YEAR);
+        month = today.get(today.MONTH) + 1;
     }
 
     RadioGroup.OnCheckedChangeListener checkRadioGroup = new RadioGroup.OnCheckedChangeListener(){

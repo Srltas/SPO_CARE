@@ -2,14 +2,15 @@ package com.example.spo_care;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -20,11 +21,10 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
-import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreS1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreS10;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreS8;
@@ -38,6 +38,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
 
     double scoreS2, scoreS3, scoreS4, scoreS5, scoreS6, scoreS7, scoreS9, scoreS11, scoreS12;
     double total;
+    int year, month;
 
     FirebaseAuth fbAuth;
     FirebaseUser fbUser;
@@ -117,14 +118,43 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         @Override
         public void onClick(View view) {
             total = scoreS1 + scoreS2 + scoreS3 + scoreS4 + scoreS5 + scoreS6 + scoreS7 + scoreS8 + scoreS9 + scoreS10 + scoreS11 + scoreS12;
-
-            AlertDialog.Builder dlg = new AlertDialog.Builder(SelfTestPeriodontalDiseaseActivity.this);
-            dlg.setTitle("결과입니다.");
-            dlg.setMessage("총합은" + Double.toString(total) + "입니다.");
-            dlg.setIcon(R.mipmap.ic_launcher);
-            dlg.show();
+            createDialog();
         }
     };
+
+    public void createDialog() {
+        AlertDialog.Builder alertadd = new AlertDialog.Builder(SelfTestPeriodontalDiseaseActivity.this);
+        alertadd.setView(selectResult(total));
+        getDate();
+        alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                //TODO 여기다가 점수(total) 날짜 (year, month) 변수들을 너가 만든 함수에 넣으면 돼
+            }
+        });
+        alertadd.show();
+    }
+    public View selectResult(double score){
+        View view;
+        LayoutInflater facotry = LayoutInflater.from(SelfTestPeriodontalDiseaseActivity.this);
+        if(score >= 14){
+            view = facotry.inflate(R.layout.selftest_result_4,null);
+        }else if(score >= 10){
+            view = facotry.inflate(R.layout.selftest_result_3,null);
+        }else if(score >= 8){
+            view = facotry.inflate(R.layout.selftest_result_2,null);
+        }else {
+            view = facotry.inflate(R.layout.selftest_result_1,null);
+        }
+        return view;
+    }
+
+    public void getDate(){
+        GregorianCalendar today = new GregorianCalendar();
+
+        year = today.get(today.YEAR);
+        month = today.get(today.MONTH) + 1;
+    }
 
     RadioGroup.OnCheckedChangeListener checkRadioGroup = new RadioGroup.OnCheckedChangeListener(){
         @Override
