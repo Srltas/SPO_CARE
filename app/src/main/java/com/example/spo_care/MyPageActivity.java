@@ -8,12 +8,24 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
 
 import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
 import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.utils.ColorTemplate;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -26,6 +38,15 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     private com.github.mikephil.charting.charts.BarChart barChart1,barChart2;
     int y = 0, m = 0, d = 0;
     int mYear, mMonth, mDay;
+
+    TextView myPageId;
+    TextView myPageName;
+    TextView myPagePhoneNumber;
+
+    FirebaseFirestore fireDatabase;
+    FirebaseAuth fireAuth;
+    FirebaseUser fireUser;
+
 
     ArrayList<String> labelsList = new ArrayList<String>();
     ArrayList<Float> valuesList = new ArrayList<Float>();
@@ -40,6 +61,12 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         barChart1 = (com.github.mikephil.charting.charts.BarChart) findViewById(R.id.chart1);
         barChart2 = (com.github.mikephil.charting.charts.BarChart) findViewById(R.id.chart2);
         visitAlarm.setOnClickListener(this);
+
+        myPageId = (TextView) findViewById(R.id.myPageId);
+        myPageName = (TextView) findViewById(R.id.myPageName);
+        myPagePhoneNumber = (TextView) findViewById(R.id.myPagePhoneNumber);
+
+        showUserInfo();
 
         Calendar cal = new GregorianCalendar();
         mYear = cal.get(Calendar.YEAR);
@@ -136,6 +163,35 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         barChart2.animateXY(5,20);
         barChart2.invalidate();
     }
+
+    private void showUserInfo(){
+        fireUser = FirebaseAuth.getInstance().getCurrentUser();
+        String email = fireUser.getEmail();
+        myPageId.setText(email);
+
+        fireDatabase.collection("Users").whereEqualTo("id", email)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot querySnapshot) {
+                        for (DocumentSnapshot docSnap : querySnapshot.getDocuments()){
+                            String name = docSnap.get("name").toString();
+                            myPageName.setText(name);
+
+                            String phoneNumber = docSnap.get("phoneNumber").toString();
+                            myPagePhoneNumber.setText(phoneNumber);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(MyPageActivity.this,"에러 발생.");
+                    }
+                });
+
+    }
+
     @Override
     public void onClick(View view) {
         if (view == visitAlarm) {

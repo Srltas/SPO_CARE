@@ -8,9 +8,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
+import static com.example.spo_care.Scene.RadioGridGroup.scoreS1;
+import static com.example.spo_care.Scene.RadioGridGroup.scoreS10;
+import static com.example.spo_care.Scene.RadioGridGroup.scoreS8;
 
 public class SelfTestCavityActivity extends Activity {
 
@@ -22,6 +40,14 @@ public class SelfTestCavityActivity extends Activity {
 
     double scoreN2, scoreN3, scoreN4, scoreN5, scoreN6, scoreN7, scoreN8, scoreN9, scoreN11, scoreN12;
     double total;
+
+    FirebaseAuth fbAuth;
+    FirebaseUser fbUser;
+    FirebaseFirestore db;
+
+    String email;
+    String value;
+    Integer testCounter;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -77,6 +103,50 @@ public class SelfTestCavityActivity extends Activity {
         });
         alertadd.show();
     }
+
+    private void getTextResultCounter() {
+        db = FirebaseFirestore.getInstance();
+        db.collection("Users").whereEqualTo("email", email)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        for (DocumentSnapshot docSnap : queryDocumentSnapshots.getDocuments()){
+                            value = docSnap.get("testCounter").toString();
+                            testCounter = Integer.parseInt(value);
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(SelfTestPeriodontalDiseaseActivity.this,"유효한 탐색 결과가 없습니다.", Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
+    private void saveTestResult() {
+        getTextResultCounter();
+        testCounter = testCounter % 5;
+        Map<String, Double> data = new HashMap<>();
+        data.put("scoreCA"+testCounter, total);
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        db.collection("Users").document(email).set(data, SetOptions.merge());
+    }
+
+    Button.OnClickListener listener = new Button.OnClickListener(){
+        @Override
+        public void onClick(View view) {
+                      total = scoreS1 + scoreS2 + scoreS3 + scoreS4 + scoreS5 + scoreS6 + scoreS7 + scoreS8 + scoreS9 + scoreS10 + scoreS11 + scoreS12;
+
+            AlertDialog.Builder dlg = new AlertDialog.Builder(SelfTestCavityActivity.this);
+            dlg.setTitle("결과입니다.");
+            dlg.setMessage("총합은" + Double.toString(total) + "입니다.");
+            dlg.setIcon(R.mipmap.ic_launcher);
+            dlg.show();
+        }
+    };
 
     RadioGroup.OnCheckedChangeListener checkRadioGroup = new RadioGroup.OnCheckedChangeListener(){
         @Override

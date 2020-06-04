@@ -107,7 +107,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         getTextResultCounter();
         testCounter = testCounter % 5;
         Map<String, Double> data = new HashMap<>();
-        data.put("score"+testCounter, total);
+        data.put("scorePD"+testCounter, total);
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
         db.collection("Users").document(email).set(data, SetOptions.merge());
