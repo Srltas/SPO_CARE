@@ -65,14 +65,12 @@ public class SelfTestCavityActivity extends Activity {
     public void createDialog() {
         AlertDialog.Builder alertadd = new AlertDialog.Builder(SelfTestCavityActivity.this);
         LayoutInflater facotry = LayoutInflater.from(SelfTestCavityActivity.this);
-        final View view = facotry.inflate(R.layout.test, null);
+        final View view = facotry.inflate(R.layout.test,null);
         alertadd.setView(view);
-        alertadd.setTitle("결과 확인");
-        alertadd.setMessage("당신의 충치 위험도는 1단계인 저위험 단계입니다!!");
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-
+                
             }
         });
         alertadd.show();
