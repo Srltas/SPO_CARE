@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
                         startActivity(selfTestIntent);
                         break;
                     case R.id.btnTeethCareItem:
-                        Intent teethCareItemIntent = new Intent(getApplicationContext(), TeethCareItemActivity.class);
+                        Intent teethCareItemIntent = new Intent(getApplicationContext(), TeethCareItemListActivity.class);
                         startActivity(teethCareItemIntent);
                         break;
                     case R.id.btnVisualImpairment:

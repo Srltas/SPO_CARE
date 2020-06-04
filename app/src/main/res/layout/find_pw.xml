@@ -47,6 +47,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:textColorHint="#EEEEEE"
                 android:hint="이메일"
                 android:inputType="textEmailAddress" />
 
@@ -56,6 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:textColorHint="#EEEEEE"
                 android:hint="이름"
                 android:inputType="textEmailAddress" />
 
@@ -65,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:ems="10"
+                android:textColorHint="#EEEEEE"
                 android:hint="전화번호"
                 android:inputType="textPassword" />
         </LinearLayout>

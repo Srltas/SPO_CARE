@@ -3,6 +3,7 @@ package com.example.spo_care;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
@@ -33,7 +34,7 @@ import java.util.GregorianCalendar;
 
 public class MyPageActivity extends Activity implements View.OnClickListener {
     private final int ONE_DAY = 24 * 60 * 60 * 1000;
-    private ImageView visitAlarm;
+    private ImageView visitAlarm, teethCare;
     private TextView dDayCount;
     private com.github.mikephil.charting.charts.BarChart barChart1,barChart2;
     int y = 0, m = 0, d = 0;
@@ -57,10 +58,12 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.my_page);
 
         visitAlarm = (ImageView) findViewById(R.id.visitAlarm);
+        teethCare = findViewById(R.id.teethCare);
         dDayCount = (TextView) findViewById(R.id.dDayCount);
         barChart1 = (com.github.mikephil.charting.charts.BarChart) findViewById(R.id.chart1);
         barChart2 = (com.github.mikephil.charting.charts.BarChart) findViewById(R.id.chart2);
         visitAlarm.setOnClickListener(this);
+        teethCare.setOnClickListener(this);
 
         myPageId = (TextView) findViewById(R.id.myPageId);
         myPageName = (TextView) findViewById(R.id.myPageName);
@@ -196,6 +199,9 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         if (view == visitAlarm) {
             showDate();
+        } else if(view == teethCare){
+            Intent teethCareIntent = new Intent(getApplicationContext(), TeethCareActivity.class);
+            startActivity(teethCareIntent);
         }
     }
 }
