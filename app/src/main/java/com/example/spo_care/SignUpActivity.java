@@ -112,6 +112,8 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                                         @Override
                                         public void onSuccess(Void aVoid) {
                                             Log.d(TAG, "문서 작성완료 되었습니다.");
+                                            finish();
+                                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
                                         }
                                     })
                                     .addOnFailureListener(new OnFailureListener() {
@@ -121,8 +123,7 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                                         }
                                     });
 
-                            finish();
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+
                         } else {
                             Toast.makeText(SignUpActivity.this, "등록에러", Toast.LENGTH_SHORT).show();
                         }

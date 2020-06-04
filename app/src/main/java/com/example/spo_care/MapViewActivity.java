@@ -16,7 +16,7 @@ public class MapViewActivity extends Activity implements View.OnClickListener {
 
     MapPOIItem marker = new MapPOIItem();
     MapPoint MARKER_POINT = MapPoint.mapPointWithCONGCoord(36.798755, 127.075768);
-    MapView mapView = new MapView(this);
+    MapView mapView;
 
     Button seoul;
     Button wonju;
@@ -35,6 +35,8 @@ public class MapViewActivity extends Activity implements View.OnClickListener {
         setContentView(R.layout.map_view);
 
         ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        mapView = new MapView(this);
+
         mapViewContainer.addView(mapView);
 
         seoul = (Button) findViewById(R.id.btnSeoul);
