@@ -79,7 +79,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         myPageName = (TextView) findViewById(R.id.myPageName);
         myPagePhoneNumber = (TextView) findViewById(R.id.myPagePhoneNumber);
 
-        showUserInfo();
+       // showUserInfo();
 
         Calendar cal = new GregorianCalendar();
         mYear = cal.get(Calendar.YEAR);

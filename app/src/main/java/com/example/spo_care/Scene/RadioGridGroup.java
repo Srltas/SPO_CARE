@@ -16,7 +16,7 @@ import com.example.spo_care.R;
 public class RadioGridGroup extends TableLayout implements View.OnClickListener {
     private static final String TAG = "ToggleButtonGroupTableLayout";
     private int checkedButtonID = -1;
-    public static double scoreN1, scoreN10, scoreS1, scoreS8, scoreS10;
+    public static float scoreN1, scoreN10, scoreS1, scoreS8, scoreS10;
 
     public RadioGridGroup(Context context){
         super(context);
@@ -34,23 +34,23 @@ public class RadioGridGroup extends TableLayout implements View.OnClickListener 
         }
 
         if(v.getId() == R.id.cavity_n1_1 || v.getId() == R.id.cavity_n1_2) {
-            scoreN1 = 1.2;
+            scoreN1 = 1.2f;
         } else if(v.getId() == R.id.cavity_n1_3 || v.getId() == R.id.cavity_n1_4 || v.getId() == R.id.cavity_n1_5 || v.getId() == R.id.cavity_n1_6){
             scoreN1 = 0;
         } else if(v.getId() == R.id.cavity_n10_3 || v.getId() == R.id.cavity_n10_4){
-            scoreN10 = 1.2;
+            scoreN10 = 1.2f;
         } else if(v.getId() == R.id.cavity_n10_1 || v.getId() == R.id.cavity_n10_2){
             scoreN10 = 0;
         } else if(v.getId() == R.id.periodontl_disease_n1_1 || v.getId() == R.id.periodontl_disease_n1_2 || v.getId() == R.id.periodontl_disease_n1_3){
             scoreS1 = 0;
         } else if(v.getId() == R.id.periodontl_disease_n1_5 || v.getId() == R.id.periodontl_disease_n1_6){
-            scoreS1 = 1.2;
+            scoreS1 = 1.2f;
         } else if(v.getId() == R.id.periodontl_disease_n1_4){
-            scoreS1 = 1.5;
+            scoreS1 = 1.5f;
         } else if(v.getId() == R.id.periodontl_disease_n8_2){
-            scoreS8 = 2.0;
+            scoreS8 = 2.0f;
         } else if(v.getId() == R.id.periodontl_disease_n10_3 || v.getId() ==R.id.periodontl_disease_n10_4){
-            scoreS10 = 1.2;
+            scoreS10 = 1.2f;
         }
     }
 

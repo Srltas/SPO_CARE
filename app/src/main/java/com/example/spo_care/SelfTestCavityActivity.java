@@ -39,8 +39,8 @@ public class SelfTestCavityActivity extends Activity {
             radiogroupNumber5, radiogroupNumber6, radiogroupNumber7,
             radiogroupNumber8, radiogroupNumber9, radiogroupNumber11, radiogroupNumber12;
 
-    double scoreN2, scoreN3, scoreN4, scoreN5, scoreN6, scoreN7, scoreN8, scoreN9, scoreN11, scoreN12;
-    double total;
+    float scoreN2, scoreN3, scoreN4, scoreN5, scoreN6, scoreN7, scoreN8, scoreN9, scoreN11, scoreN12;
+    float total;
     int year, month;
 
     SQLiteHelper sqLite;
@@ -85,7 +85,7 @@ public class SelfTestCavityActivity extends Activity {
     Button.OnClickListener listener = new Button.OnClickListener(){
         @Override
         public void onClick(View view) {
-            total = scoreN1 + scoreN2 + scoreN3 + scoreN4 + scoreN5 + scoreN6 + scoreN7 + scoreN8 + scoreN9 + scoreN10 + scoreN11 + scoreN12;
+            total = (float) (scoreN1 + scoreN2 + scoreN3 + scoreN4 + scoreN5 + scoreN6 + scoreN7 + scoreN8 + scoreN9 + scoreN10 + scoreN11 + scoreN12);
             createDialog();
         }
     };
@@ -105,7 +105,7 @@ public class SelfTestCavityActivity extends Activity {
         alertadd.show();
     }
 
-    public View selectResult(double score){
+    public View selectResult(float score){
         View view;
         LayoutInflater facotry = LayoutInflater.from(SelfTestCavityActivity.this);
         if(score >= 11){
@@ -165,7 +165,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 2번
     public void checkN2(int checkedId){
         if(checkedId == R.id.cavity_n2_1 || checkedId == R.id.cavity_n2_2){
-            scoreN2 = 1.2;
+            scoreN2 = 1.2f;
         } else{
             scoreN2 = 0;
         }
@@ -174,7 +174,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 4번
     public void checkN4(int checkedId){
         if(checkedId == R.id.cavity_n4_1){
-            scoreN4 = 2.0;
+            scoreN4 = 2.0f;
         } else{
             scoreN4 = 0;
         }
@@ -183,7 +183,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 5번
     public void checkN5(int checkedId){
         if(checkedId == R.id.cavity_n5_1){
-            scoreN5 = 2.0;
+            scoreN5 = 2.0f;
         } else{
             scoreN5 = 0;
         }
@@ -192,7 +192,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 6번
     public void checkN6(int checkedId){
         if(checkedId == R.id.cavity_n6_4){
-            scoreN6 = 1.2;
+            scoreN6 = 1.2f;
         } else{
             scoreN6 = 0;
         }
@@ -201,7 +201,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 7번
     public void checkN7(int checkedId){
         if(checkedId == R.id.cavity_n7_2){
-            scoreN7 = 1.5;
+            scoreN7 = 1.5f;
         } else{
             scoreN7 = 0;
         }
@@ -210,7 +210,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 8번
     public void checkN8(int checkedId){
         if(checkedId == R.id.cavity_n8_1){
-            scoreN8 = 1.2;
+            scoreN8 = 1.2f;
         } else{
             scoreN8 = 0;
         }
@@ -219,7 +219,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 9번
     public void checkN9(int checkedId){
         if(checkedId == R.id.cavity_n9_1){
-            scoreN9 = 1.2;
+            scoreN9 = 1.2f;
         } else{
             scoreN9 = 0;
         }
@@ -228,7 +228,7 @@ public class SelfTestCavityActivity extends Activity {
     //질문 10번
     public void checkN10(int checkedId){
         if(checkedId == R.id.cavity_n10_3 || checkedId == R.id.cavity_n10_4){
-            scoreN10 = 1.2;
+            scoreN10 = 1.2f;
         } else{
             scoreN10 = 0;
         }
@@ -237,14 +237,14 @@ public class SelfTestCavityActivity extends Activity {
     //질문 11번
     public void checkN11(int checkedId){
         if(checkedId == R.id.cavity_n11_2){
-            scoreN11 = 1.2;
+            scoreN11 = 1.2f;
         }
     }
 
     //질문 12번
     public void checkN12(int checkedId){
         if(checkedId == R.id.cavity_n12_4 || checkedId == R.id.cavity_n12_5){
-            scoreN12 = 1.2;
+            scoreN12 = 1.2f;
         } else{
             scoreN12 = 0;
         }

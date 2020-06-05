@@ -41,8 +41,8 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
             radiogroupNumber5, radiogroupNumber6, radiogroupNumber7,
             radiogroupNumber9, radiogroupNumber11, radiogroupNumber12;
 
-    double scoreS2, scoreS3, scoreS4, scoreS5, scoreS6, scoreS7, scoreS9, scoreS11, scoreS12;
-    double total;
+    float scoreS2, scoreS3, scoreS4, scoreS5, scoreS6, scoreS7, scoreS9, scoreS11, scoreS12;
+    float total;
     int year, month;
 
     SQLiteHelper sqLite;
@@ -103,7 +103,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         });
         alertadd.show();
     }
-    public View selectResult(double score){
+    public View selectResult(float score){
         View view;
         LayoutInflater facotry = LayoutInflater.from(SelfTestPeriodontalDiseaseActivity.this);
         if(score >= 14){
@@ -160,9 +160,9 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 2번
     public void checkN2(int checkedId){
         if(checkedId == R.id.periodontl_disease_n2_1){
-            scoreS2 = 1.5;
+            scoreS2 = 1.5f;
         } else if(checkedId == R.id.periodontl_disease_n2_2){
-            scoreS2 = 1.2;
+            scoreS2 = 1.2f;
         } else {
             scoreS2 = 0;
         }
@@ -171,7 +171,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 4번
     public void checkN4(int checkedId){
         if(checkedId == R.id.periodontl_disease_n4_1){
-            scoreS4 = 1.2;
+            scoreS4 = 1.2f;
         } else{
             scoreS4 = 0;
         }
@@ -180,7 +180,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 5번
     public void checkN5(int checkedId){
         if(checkedId == R.id.periodontl_disease_n5_1){
-            scoreS5 = 2.0;
+            scoreS5 = 2.0f;
         } else{
             scoreS5 = 0;
         }
@@ -189,7 +189,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 6번
     public void checkN6(int checkedId){
         if(checkedId == R.id.periodontl_disease_n6_4){
-            scoreS6 = 2.0;
+            scoreS6 = 2.0f;
         } else{
             scoreS6 = 0;
         }
@@ -198,7 +198,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 7번
     public void checkN7(int checkedId){
         if(checkedId == R.id.periodontl_disease_n7_2){
-            scoreS7 = 1.3;
+            scoreS7 = 1.3f;
         } else{
             scoreS7 = 0;
         }
@@ -207,7 +207,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 8번
     public void checkN8(int checkedId){
         if(checkedId == R.id.periodontl_disease_n8_2){
-            scoreS8 = 2.0;
+            scoreS8 = 2.0f;
         } else{
             scoreS8 = 0;
         }
@@ -216,7 +216,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 9번
     public void checkN9(int checkedId){
         if(checkedId == R.id.periodontl_disease_n9_1){
-            scoreS9 = 2.0;
+            scoreS9 = 2.0f;
         } else{
             scoreS9 = 0;
         }
@@ -225,7 +225,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 10번
     public void checkN10(int checkedId){
         if(checkedId == R.id.periodontl_disease_n10_3 || checkedId == R.id.periodontl_disease_n10_4){
-            scoreS10 = 1.2;
+            scoreS10 = 1.2f;
         } else{
             scoreS10 = 0;
         }
@@ -234,14 +234,14 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     //질문 11번
     public void checkN11(int checkedId){
         if(checkedId == R.id.periodontl_disease_n11_2){
-            scoreS11 = 1.5;
+            scoreS11 = 1.5f;
         }
     }
 
     //질문 12번
     public void checkN12(int checkedId){
         if(checkedId == R.id.periodontl_disease_n12_1){
-            scoreS12 = 2.0;
+            scoreS12 = 2.0f;
         } else{
             scoreS12 = 0;
         }
