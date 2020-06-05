@@ -32,7 +32,9 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
     }
 
     public void insertCA(String date, double score) {
-        updateCA();
+        if (!checkCA().equals(date)){
+            updateCA();
+        }
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE CA_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1");
     }
@@ -62,9 +64,24 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         dbWrite.execSQL("UPDATE CA_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3");
     }
 
+    public String checkCA() {
+        SQLiteDatabase dbRead = getReadableDatabase();
+        String checkDate = null;
+
+        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM CA_TEST_RESULT WHERE counter = 1",null);
+        while (cursor.moveToNext()){
+            checkDate = cursor.getString(0);
+        }
+        return checkDate;
+    }
+
+
 
     public void insertPD(String date, double score) {
-        updatePD();
+        if (!checkDP().equals(date)){
+            updatePD();
+        }
+   
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE PD_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1");
     }
@@ -92,6 +109,17 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
 
         dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date1 + "', score=" + score1 + " WHERE COUNTER=2");
         dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3");
+    }
+
+    public String checkDP() {
+        SQLiteDatabase dbRead = getReadableDatabase();
+        String checkDate = null;
+
+        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM DP_TEST_RESULT WHERE counter = 1",null);
+        while (cursor.moveToNext()){
+            checkDate = cursor.getString(0);
+        }
+        return checkDate;
     }
 
     public TestData printResult() {
