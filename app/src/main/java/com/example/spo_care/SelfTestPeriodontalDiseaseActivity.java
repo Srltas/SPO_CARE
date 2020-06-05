@@ -3,6 +3,7 @@ package com.example.spo_care;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,12 +13,16 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
@@ -40,13 +45,7 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     double total;
     int year, month;
 
-    FirebaseAuth fbAuth;
-    FirebaseUser fbUser;
-    FirebaseFirestore db;
-
-    String email;
-    String value;
-    Integer testCounter;
+    SQLiteHelper sqLite;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -75,44 +74,11 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         radiogroupNumber11.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber12.setOnCheckedChangeListener(checkRadioGroup);
 
-        fbUser = fbAuth.getInstance().getCurrentUser();
-        if (fbUser != null) {
-            email = fbUser.getEmail();
-        }
+        sqLite = new SQLiteHelper(getApplicationContext(), "TestResult.db", null, 1);
+
     }
 
-    //TODO 결과값을 저장하면서 카운트 하는 부분을 만들어야됨
 
-    private void getTextResultCounter() {
-        db = FirebaseFirestore.getInstance();
-        db.collection("Users").whereEqualTo("email", email)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (DocumentSnapshot docSnap : queryDocumentSnapshots.getDocuments()){
-                            value = docSnap.get("testCounter").toString();
-                            testCounter = Integer.parseInt(value);
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(SelfTestPeriodontalDiseaseActivity.this,"유효한 탐색 결과가 없습니다.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    private void saveTestResult() {
-        getTextResultCounter();
-        testCounter = testCounter % 5;
-        Map<String, Double> data = new HashMap<>();
-        data.put("score"+testCounter, total);
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("Users").document(email).set(data, SetOptions.merge());
-    }
 
     Button.OnClickListener listener = new Button.OnClickListener(){
         @Override
@@ -129,7 +95,10 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //TODO 여기다가 점수(total) 날짜 (year, month) 변수들을 너가 만든 함수에 넣으면 돼
+
+                String date = year + "-" + month;
+                sqLite.insertPD(date, total);
+
             }
         });
         alertadd.show();

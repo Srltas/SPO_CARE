@@ -8,11 +8,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import java.util.GregorianCalendar;
 
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN1;
 import static com.example.spo_care.Scene.RadioGridGroup.scoreN10;
+
 
 public class SelfTestCavityActivity extends Activity {
 
@@ -25,6 +42,12 @@ public class SelfTestCavityActivity extends Activity {
     double scoreN2, scoreN3, scoreN4, scoreN5, scoreN6, scoreN7, scoreN8, scoreN9, scoreN11, scoreN12;
     double total;
     int year, month;
+
+    SQLiteHelper sqLite;
+
+    String email;
+    String value;
+    Integer testCounter;
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -54,6 +77,9 @@ public class SelfTestCavityActivity extends Activity {
         radiogroupNumber9.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber11.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber12.setOnCheckedChangeListener(checkRadioGroup);
+
+        sqLite = new SQLiteHelper(getApplicationContext(), "TestResult.db", null, 1);
+
     }
 
     Button.OnClickListener listener = new Button.OnClickListener(){
@@ -72,7 +98,8 @@ public class SelfTestCavityActivity extends Activity {
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //TODO 여기다가 점수(total) 날짜 (year, month) 변수들을 너가 만든 함수에 넣으면 돼
+                String date = year + "-" + month;
+                sqLite.insertCA(date, total);
             }
         });
         alertadd.show();

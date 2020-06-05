@@ -123,7 +123,6 @@ public class SignUpActivity extends Activity implements View.OnClickListener {
                                         }
                                     });
 
-
                         } else {
                             Toast.makeText(SignUpActivity.this, "등록에러", Toast.LENGTH_SHORT).show();
                         }
