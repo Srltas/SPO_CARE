@@ -25,7 +25,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/binggrae_bold"
             android:gravity="center"
-            android:paddingRight="20dp"
             android:text="시각장애"
             android:textColor="#ffffff"
             android:textSize="35sp" />
@@ -76,6 +75,19 @@
                         android:text="특징"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_visual_impairment_characteristic"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -84,7 +96,9 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
+
                     android:text="@string/visual_impairment_characteristic"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -119,6 +133,19 @@
                         android:text="구강관리 주의사항"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_visual_impairment_precautions"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -127,8 +154,8 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/visual_impairment_precautions"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -141,7 +168,7 @@
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_marginTop="30dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:orientation="vertical">
 
                 <LinearLayout
@@ -164,6 +191,19 @@
                         android:text="구강관리 Tip"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_visual_impairment_tip"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -172,7 +212,8 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/visual_impairment_tip"
                     android:textColor="#000000"
                     android:textSize="20sp"

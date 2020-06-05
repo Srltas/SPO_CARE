@@ -9,6 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#90AFFF"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
@@ -25,7 +26,6 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/binggrae_bold"
             android:gravity="center"
-            android:paddingRight="20dp"
             android:text="뇌병변 &amp; 지체장애"
             android:textColor="#ffffff"
             android:textSize="35sp" />
@@ -59,7 +59,6 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -78,12 +77,14 @@
                         android:text="특징"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
                     <View
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
+
                     <ImageView
-                        android:id="@+id/icon_brain_lesions_characteristic"
+                        android:id="@+id/speak_brain_lesions_characteristic"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_marginRight="20dp"
@@ -97,9 +98,10 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/brain_lesions_characteristic"
-                    android:textColor="#666666"
+                    android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -115,7 +117,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -133,6 +134,19 @@
                         android:text="구강관리 주의사항"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_brain_lesions_precautions"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -141,9 +155,10 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/brain_lesions_precautions"
-                    android:textColor="#666666"
+                    android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -160,7 +175,6 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -178,6 +192,19 @@
                         android:text="구강관리 Tip"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_brain_lesions_tip"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -186,9 +213,10 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/brain_lesions_tip"
-                    android:textColor="#666666"
+                    android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -222,6 +250,19 @@
                         android:text="방문구강관리서비스"
                         android:textColor="#ffffff"
                         android:textSize="30sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/speak_brain_lesions_visit"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="right"
+                        android:background="@drawable/icon_voice_service" />
                 </LinearLayout>
 
                 <TextView
@@ -230,9 +271,10 @@
                     android:background="@drawable/box_selftest_white"
                     android:paddingLeft="20dp"
                     android:paddingTop="10dp"
-                    android:paddingRight="20dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="10dp"
                     android:text="@string/brain_lesions_visit"
-                    android:textColor="#666666"
+                    android:textColor="#000000"
                     android:textSize="20sp"
                     android:textStyle="bold" />
             </LinearLayout>
