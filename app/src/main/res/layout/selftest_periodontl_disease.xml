@@ -70,7 +70,8 @@
 
                 <com.example.spo_care.Scene.RadioGridGroup
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
 
                     <TableRow>
                         <RadioButton
@@ -78,6 +79,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:textColor="#000000"
+                            android:layout_marginLeft="4dp"
                             android:text="20~29세"
                             android:textSize="15dp" />
 
@@ -98,7 +100,9 @@
                             android:textColor="#000000"
                             android:text="40~49세"
                             android:textSize="15dp" />
+                    </TableRow>
 
+                    <TableRow>
                         <RadioButton
                             android:id="@+id/periodontl_disease_n1_4"
                             android:layout_width="wrap_content"
@@ -107,9 +111,6 @@
                             android:textColor="#000000"
                             android:text="50~59세"
                             android:textSize="15dp" />
-                    </TableRow>
-
-                    <TableRow>
 
                         <RadioButton
                             android:id="@+id/periodontl_disease_n1_5"
@@ -465,7 +466,8 @@
 
                 <com.example.spo_care.Scene.RadioGridGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
 
                     <TableRow>
                         <RadioButton
@@ -571,7 +573,8 @@
 
                 <com.example.spo_care.Scene.RadioGridGroup
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
 
                     <TableRow>
                         <RadioButton

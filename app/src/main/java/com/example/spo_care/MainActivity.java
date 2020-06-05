@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 
@@ -14,7 +14,7 @@ public class MainActivity extends Activity {
     private final long FINISH_INTERVAL_TIME = 2000;
     private long backPressedTime = 0;
 
-    ImageView btnMyPage, btnSelfTest, btnTeethCareItem, btnVisualImpairment,
+    LinearLayout btnMyPage, btnSelfTest, btnTeethCareItem, btnVisualImpairment,
             btnBrainLesions, btnHearingImpairment, btnDisablePeopleDentistry,
             btnTeethBrushTimer, btnMouthTraining;
 

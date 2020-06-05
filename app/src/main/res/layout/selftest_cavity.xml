@@ -72,6 +72,7 @@
                     android:id="@+id/cavity_n1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:stretchColumns="*"
                     android:orientation="vertical">
 
                     <TableRow>
@@ -101,6 +102,8 @@
                             android:text="40~49세"
                             android:textSize="15dp" />
 
+                    </TableRow>
+                    <TableRow>
                         <RadioButton
                             android:id="@+id/cavity_n1_4"
                             android:layout_width="wrap_content"
@@ -109,8 +112,7 @@
                             android:textColor="#000000"
                             android:text="50~59세"
                             android:textSize="15dp" />
-                    </TableRow>
-                    <TableRow>
+
                         <RadioButton
                             android:id="@+id/cavity_n1_5"
                             android:layout_width="wrap_content"
@@ -155,6 +157,7 @@
                     android:id="@+id/cavity_n2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
@@ -189,7 +192,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:textColor="#000000"
-                        android:text="대학교 졸업 이상"
+                        android:text="대졸 이상"
                         android:textSize="15dp" />
                 </RadioGroup>
             </LinearLayout>
@@ -371,7 +374,7 @@
                         android:id="@+id/cavity_n6_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#000000"
                         android:text="1번"
                         android:textSize="15dp" />
@@ -380,7 +383,7 @@
                         android:id="@+id/cavity_n6_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#000000"
                         android:text="2~3번"
                         android:textSize="15dp" />
@@ -389,7 +392,7 @@
                         android:id="@+id/cavity_n6_4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginLeft="5dp"
                         android:textColor="#000000"
                         android:text="4번 이상"
                         android:textSize="15dp" />

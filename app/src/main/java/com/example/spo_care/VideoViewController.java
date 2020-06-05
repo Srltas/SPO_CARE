@@ -11,10 +11,10 @@ import com.google.android.youtube.player.YouTubePlayerView;
 public class VideoViewController extends YouTubeBaseActivity {
 
     private final String API_KEY = "AIzaSyCO67ZZRKUzc7kwNQ3LqD7hlRl0T2IG2_M";
-    private final String VIDEO_ID_1 = "uR8Mrt1IpXg";
-    private final String VIDEO_ID_2 = "Raj-AuQgCTg";
-    private final String VIDEO_ID_3 = "ALZHF5UqnU4";
-    private final String VIDEO_ID_4 = "1usq4sVWWls";
+    private final String VIDEO_ID_1 = "GRU28UfK_4U";
+    private final String VIDEO_ID_2 = "gJikKbSfXCs";
+    private final String VIDEO_ID_3 = "CGMHgSLHQaY";
+    private final String VIDEO_ID_4 = "NUDaqyIOtlo";
     private String message;
     YouTubePlayerView youtubeView;
     YouTubePlayer.OnInitializedListener listener;

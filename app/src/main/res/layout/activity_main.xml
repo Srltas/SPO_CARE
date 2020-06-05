@@ -2,7 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:id="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/background_main"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
@@ -40,83 +39,206 @@
         android:gravity="center">
 
         <TableRow
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center">
-
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnMyPage"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:background="@drawable/icon_my_page" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_my_page" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="마이페이지"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnSelfTest"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_selftest" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_selftest" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="자가진단"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnTeethCareItem"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_teeth_care" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_teeth_care" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="구강관리용품\n소개"/>
+            </LinearLayout>
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center">
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnVisualImpairment"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:background="@drawable/icon_visual" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_visual" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="시각장애"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnBrainLesions"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_brain" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_brain" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="뇌병변\n지체장애"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnHearingImpairment"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_hearing" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_hearing" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="청각장애"/>
+            </LinearLayout>
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center">
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnDisablePeopleDentistry"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:background="@drawable/icon_hospital_location" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_hospital_location" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="장애인\n치과병원"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnTeethBrushTimer"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_timer" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_timer_notitle" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="칫솔질\n타이머"/>
+            </LinearLayout>
 
-            <ImageView
+            <LinearLayout
                 android:id="@+id/btnMouthTraining"
-                android:layout_width="110dp"
-                android:layout_height="130dp"
-                android:layout_marginLeft="10dp"
-                android:background="@drawable/icon_training" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/icon_training" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:text="구강\n재활훈련"/>
+            </LinearLayout>
         </TableRow>
     </TableLayout>
 

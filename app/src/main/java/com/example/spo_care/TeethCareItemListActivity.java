@@ -59,14 +59,29 @@ public class TeethCareItemListActivity extends Activity implements View.OnClickL
                 startActivity(itemVideo4);
                 break;
             case R.id.itemVideoN5:
+                Intent itemVideo5 = new Intent(getApplicationContext(), TeethCareItemText.class);
+                itemVideo5.putExtra("itemText","itemText5");
+                startActivity(itemVideo5);
                 break;
             case R.id.itemVideoN6:
+                Intent itemVideo6 = new Intent(getApplicationContext(), TeethCareItemText.class);
+                itemVideo6.putExtra("itemText","itemText6");
+                startActivity(itemVideo6);
                 break;
             case R.id.itemVideoN7:
+                Intent itemVideo7 = new Intent(getApplicationContext(), TeethCareItemText.class);
+                itemVideo7.putExtra("itemText","itemText7");
+                startActivity(itemVideo7);
                 break;
             case R.id.itemVideoN8:
+                Intent itemVideo8 = new Intent(getApplicationContext(), TeethCareItemText.class);
+                itemVideo8.putExtra("itemText","itemText8");
+                startActivity(itemVideo8);
                 break;
             case R.id.itemVideoN9:
+                Intent itemVideo9 = new Intent(getApplicationContext(), TeethCareItemText.class);
+                itemVideo9.putExtra("itemText","itemText9");
+                startActivity(itemVideo9);
                 break;
         }
     }

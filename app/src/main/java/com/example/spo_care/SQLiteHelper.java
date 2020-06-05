@@ -135,17 +135,17 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
             if (i == 1){
                 testData.setCAcounter1(cursor.getInt(0));
                 testData.setCAdate1(cursor.getString(1));
-                testData.setCAscore1(cursor.getDouble(2));
+                testData.setCAscore1(cursor.getFloat(2));
                 i++;
             } else if (i == 2){
                 testData.setCAcounter2(cursor.getInt(0));
                 testData.setCAdate2(cursor.getString(1));
-                testData.setCAscore2(cursor.getDouble(2));
+                testData.setCAscore2(cursor.getFloat(2));
                 i++;
             } else if (i == 3){
                 testData.setCAcounter3(cursor.getInt(0));
                 testData.setCAdate3(cursor.getString(1));
-                testData.setCAscore3(cursor.getDouble(2));
+                testData.setCAscore3(cursor.getFloat(2));
                 i++;
             } else {
 
@@ -157,17 +157,17 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
             if (i == 1){
                 testData.setPDcounter1(cursor.getInt(0));
                 testData.setPDdate1(cursor.getString(1));
-                testData.setPDscore1(cursor.getDouble(2));
+                testData.setPDscore1(cursor.getFloat(2));
                 i++;
             } else if (i == 2){
                 testData.setPDcounter2(cursor.getInt(0));
                 testData.setPDdate2(cursor.getString(1));
-                testData.setPDscore2(cursor.getDouble(2));
+                testData.setPDscore2(cursor.getFloat(2));
                 i++;
             } else if (i == 3){
                 testData.setPDcounter3(cursor.getInt(0));
                 testData.setPDdate3(cursor.getString(1));
-                testData.setPDscore3(cursor.getDouble(2));
+                testData.setPDscore3(cursor.getFloat(2));
                 i++;
             }
         }
