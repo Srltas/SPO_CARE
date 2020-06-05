@@ -58,6 +58,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -69,12 +70,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp"
                         android:fontFamily="@font/binggrae_bold"
                         android:text="특징"
                         android:textColor="#ffffff"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <View
                         android:layout_width="0dp"
@@ -116,6 +115,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -127,12 +127,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp"
                         android:fontFamily="@font/binggrae_bold"
                         android:text="구강관리 주의사항"
                         android:textColor="#ffffff"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <View
                         android:layout_width="0dp"
@@ -174,6 +172,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="center"
                     android:orientation="horizontal">
 
                     <ImageView
@@ -185,12 +184,10 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="20dp"
-                        android:layout_marginBottom="5dp"
                         android:fontFamily="@font/binggrae_bold"
                         android:text="구강관리 Tip"
                         android:textColor="#ffffff"
-                        android:textSize="30sp" />
+                        android:textSize="25sp" />
 
                     <View
                         android:layout_width="0dp"

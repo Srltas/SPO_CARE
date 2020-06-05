@@ -55,13 +55,18 @@
             android:id="@+id/cavityTest"
             android:layout_width="170dp"
             android:layout_height="200dp"
+            android:layout_gravity="left"
             android:background="@drawable/icon_cavity_disease" />
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
 
         <ImageView
             android:id="@+id/periodontalDiseaseTest"
             android:layout_width="170dp"
             android:layout_height="200dp"
-            android:layout_marginLeft="10dp"
+            android:layout_gravity="right"
             android:background="@drawable/icon_periodontl_disease" />
 
     </LinearLayout>
