@@ -99,7 +99,7 @@ public class SelfTestCavityActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String date = year + "-" + month;
-                sqLite.insertPD(date, total);
+                sqLite.insertCA(date, total);
             }
         });
         alertadd.show();
