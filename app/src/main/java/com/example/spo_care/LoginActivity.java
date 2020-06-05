@@ -39,6 +39,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     Button findId;
     FirebaseAuth firebaseAuth;
 
+    public static String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -118,6 +120,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
+
                             finish();
                             startActivity(new Intent(getApplicationContext(), MainActivity.class));
 

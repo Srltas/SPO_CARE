@@ -5,6 +5,7 @@ import android.app.DatePickerDialog;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageView;
@@ -51,6 +52,8 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
 
     ArrayList<String> labelsList = new ArrayList<String>();
     ArrayList<Float> valuesList = new ArrayList<Float>();
+
+    private static final String TAG = "MyPageActivity";
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -168,11 +171,12 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     }
 
     private void showUserInfo(){
-        fireUser = FirebaseAuth.getInstance().getCurrentUser();
+        fireUser = fireAuth.getInstance().getCurrentUser();
         String email = fireUser.getEmail();
         myPageId.setText(email);
+        Log.d(TAG,"email = "+email);
 
-        fireDatabase.collection("Users").whereEqualTo("id", email)
+        fireDatabase.getInstance().collection("Users").whereEqualTo("id", email)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override

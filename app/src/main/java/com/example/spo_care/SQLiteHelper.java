@@ -81,7 +81,7 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         if (!checkDP().equals(date)){
             updatePD();
         }
-   
+
         SQLiteDatabase db = getWritableDatabase();
         db.execSQL("UPDATE PD_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1");
     }
