@@ -41,6 +41,7 @@
         <activity android:name=".MapViewActivity"/>
         <activity android:name=".TeethCareItemVideo"/>
         <activity android:name=".TeethCareActivity"/>
+        <activity android:name=".TeethCareItemText"/>
 
         <meta-data android:name="com.kakao.sdk.AppKey"
             android:value="ed0db75d891f3dc572001ed83733bf36"/>
