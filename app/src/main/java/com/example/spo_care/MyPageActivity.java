@@ -189,7 +189,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MyPageActivity.this,"에러 발생.");
+                        Toast.makeText(MyPageActivity.this,"에러 발생.",Toast.LENGTH_SHORT).show();
                     }
                 });
 

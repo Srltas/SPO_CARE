@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -42,9 +43,7 @@ public class SelfTestCavityActivity extends Activity {
     double total;
     int year, month;
 
-    FirebaseAuth fbAuth;
-    FirebaseUser fbUser;
-    FirebaseFirestore db;
+    SQLiteHelper sqLite;
 
     String email;
     String value;
@@ -78,6 +77,9 @@ public class SelfTestCavityActivity extends Activity {
         radiogroupNumber9.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber11.setOnCheckedChangeListener(checkRadioGroup);
         radiogroupNumber12.setOnCheckedChangeListener(checkRadioGroup);
+
+        sqLite = new SQLiteHelper(getApplicationContext(), "TestResult.db", null, 1);
+
     }
 
     Button.OnClickListener listener = new Button.OnClickListener(){
@@ -96,57 +98,12 @@ public class SelfTestCavityActivity extends Activity {
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //TODO 여기다가 점수(total) 날짜 (year, month) 변수들을 너가 만든 함수에 넣으면 돼
+                String date = year + "-" + month;
+                sqLite.insertPD(date, total);
             }
         });
         alertadd.show();
     }
-
-    private void getTextResultCounter() {
-        db = FirebaseFirestore.getInstance();
-        db.collection("Users").whereEqualTo("email", email)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (DocumentSnapshot docSnap : queryDocumentSnapshots.getDocuments()){
-                            value = docSnap.get("testCounter").toString();
-                            testCounter = Integer.parseInt(value);
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(SelfTestCavityActivity.this,"유효한 탐색 결과가 없습니다.", Toast.LENGTH_SHORT).show();
-                    }
-                });
-    }
-
-    private void saveTestResult() {
-        getTextResultCounter();
-        testCounter = testCounter % 5;
-        Map<String, Double> data = new HashMap<>();
-        data.put("scoreCA"+testCounter, total);
-
-        FirebaseFirestore db = FirebaseFirestore.getInstance();
-        db.collection("Users").document(email).set(data, SetOptions.merge());
-    }
-
-    /*
-    Button.OnClickListener listener = new Button.OnClickListener(){
-        @Override
-        public void onClick(View view) {
-                      total = scoreS1 + scoreS2 + scoreS3 + scoreS4 + scoreS5 + scoreS6 + scoreS7 + scoreS8 + scoreS9 + scoreS10 + scoreS11 + scoreS12;
-
-            AlertDialog.Builder dlg = new AlertDialog.Builder(SelfTestCavityActivity.this);
-            dlg.setTitle("결과입니다.");
-            dlg.setMessage("총합은" + Double.toString(total) + "입니다.");
-            dlg.setIcon(R.mipmap.ic_launcher);
-            dlg.show();
-        }
-    };
-    */
 
     public View selectResult(double score){
         View view;
