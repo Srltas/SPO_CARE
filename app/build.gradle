@@ -48,5 +48,8 @@ dependencies {
     //막대그래프
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     implementation files('libs\\YouTubeAndroidPlayerApi.jar')
+
+    //유저 사진
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -34,6 +34,13 @@
         android:background="@drawable/box_my_page"
         android:orientation="vertical">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_gravity="center"
+        android:src="@drawable/icon_my_page_user2"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -45,7 +52,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="#ffffff"
                 android:textSize="20dp"
-                android:text="예약 날짜까지 : "/>
+                android:text="예약 날짜까지 I "/>
             <TextView
                 android:id="@+id/dDayCount"
                 android:layout_width="wrap_content"
@@ -64,7 +71,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:text="아이디 : "/>
+                android:text="아이디 I "/>
             <TextView
                 android:id="@+id/myPageId"
                 android:layout_width="wrap_content"
@@ -82,7 +89,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:text="이름 : "/>
+                android:text="이름 I "/>
             <TextView
                 android:id="@+id/myPageName"
                 android:layout_width="wrap_content"
@@ -101,7 +108,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
-                android:text="전화번호 : "/>
+                android:text="전화번호 I "/>
             <TextView
                 android:id="@+id/myPagePhoneNumber"
                 android:layout_width="wrap_content"

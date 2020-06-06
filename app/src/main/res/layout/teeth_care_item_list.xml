@@ -61,7 +61,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_easy_grip" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -86,7 +86,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_2" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -111,7 +111,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_3" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -136,7 +136,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_4" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -161,7 +161,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_5" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -186,7 +186,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_6" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -211,7 +211,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_7" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -236,7 +236,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_8" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -261,7 +261,7 @@
                 <ImageView
                     android:layout_width="300dp"
                     android:layout_height="200dp"
-                    android:background="@drawable/icon_youtube" />
+                    android:background="@drawable/image_item_9" />
 
                 <TextView
                     android:layout_width="match_parent"

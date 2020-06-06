@@ -100,7 +100,7 @@
 
                     android:text="@string/visual_impairment_characteristic"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -156,7 +156,7 @@
                     android:paddingBottom="10dp"
                     android:text="@string/visual_impairment_precautions"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </LinearLayout>
 
@@ -213,7 +213,7 @@
                     android:paddingBottom="10dp"
                     android:text="@string/visual_impairment_tip"
                     android:textColor="#000000"
-                    android:textSize="20sp"
+                    android:textSize="25sp"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>

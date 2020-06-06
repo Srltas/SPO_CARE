@@ -56,7 +56,6 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     ArrayList<Float> periodontalValuesList = new ArrayList<Float>();
 
     //유저 테스트 점수 순서 정렬을 위한 변수
-    int[] countTempArray;
     String[] dateTempArray;
     float[] scoreTempArray;
 
@@ -79,7 +78,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         myPageName = (TextView) findViewById(R.id.myPageName);
         myPagePhoneNumber = (TextView) findViewById(R.id.myPagePhoneNumber);
 
-       // showUserInfo();
+       showUserInfo();
 
         Calendar cal = new GregorianCalendar();
         mYear = cal.get(Calendar.YEAR);
@@ -87,31 +86,43 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         mDay = cal.get(Calendar.DAY_OF_MONTH);
 
         getCaTestScore();
+        getPdTestScore();
 
         barChartGraph1(cavityLabelsList, cavityValuesList);
         barChartGraph2(periodontalLabelsList, periodontalValuesList);
     }
     //유저 테스트 점수 가져오기
+    void getPdTestScore(){
+        TestData testData = new TestData();
+        dateTempArray = testData.getpdDateTempArray();
+        scoreTempArray = testData.getPdScoreTempArray();
+
+        for(int i = 2; i >=0; i--){
+            if(dateTempArray[i] == null)
+                return;
+            if(dateTempArray[i].equals("2020-0")){
+                dateTempArray[i] = "";
+            }
+            cavityLabelsList.add(dateTempArray[i]);
+            cavityValuesList.add(scoreTempArray[i]);
+        }
+    }
+
+    //유저 테스트 점수 가져오기
     void getCaTestScore(){
-        int count = 3, select;
 
         TestData testData = new TestData();
-        countTempArray = testData.getCaCounterArray();
         dateTempArray = testData.getCaDateTempArray();
         scoreTempArray = testData.getCaScoreTempArray();
 
-        while (count > 0) {
-            for(select = 0; select < 3; select++){
-                if(countTempArray[select] == 0){
-                    return;
-                }
-                if(countTempArray[select] == count){
-                    cavityLabelsList.add(dateTempArray[select]);
-                    cavityValuesList.add(scoreTempArray[select]);
-                    break;
-                }
+        for(int i = 2; i >=0; i--){
+            if(dateTempArray[i] == null)
+                return;
+            if(dateTempArray[i].equals("2020-0")){
+                dateTempArray[i] = "";
             }
-            count--;
+            cavityLabelsList.add(dateTempArray[i]);
+            cavityValuesList.add(scoreTempArray[i]);
         }
     }
 
@@ -123,8 +134,6 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
                dDayCount.setText(getDday(year,month,dayOfMonth));
            }
         },mYear,mMonth,mDay);
-
-        datePickerDialog.setMessage("방문 예약하기");
         datePickerDialog.show();
     }
     //Dday 날짜 구하기
