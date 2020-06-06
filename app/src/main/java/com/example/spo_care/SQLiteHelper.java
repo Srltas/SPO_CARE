@@ -24,7 +24,6 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(1, 2020-00, 0)");
         db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(2, 2020-00, 0)");
         db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(3, 2020-00, 0)");
-        printResult();
     }
 
     @Override
@@ -47,7 +46,7 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         String date1 = null, date2 = null;
         double score1 = 0 , score2= 0 ;
 
-        //dbRead.execSQL("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1");
+        dbRead.execSQL("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1");
 
         Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1", null);
         while (cursor1.isFirst()){
