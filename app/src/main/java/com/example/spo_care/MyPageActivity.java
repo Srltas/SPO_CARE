@@ -37,7 +37,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     private final int ONE_DAY = 24 * 60 * 60 * 1000;
     private ImageView visitAlarm, teethCare;
     private TextView dDayCount;
-    private com.github.mikephil.charting.charts.BarChart barChart1,barChart2;
+    private com.github.mikephil.charting.charts.BarChart barChart1, barChart2;
     int y = 0, m = 0, d = 0;
     int mYear, mMonth, mDay;
 
@@ -54,6 +54,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     ArrayList<Float> cavityValuesList = new ArrayList<Float>();
     ArrayList<String> periodontalLabelsList = new ArrayList<String>();
     ArrayList<Float> periodontalValuesList = new ArrayList<Float>();
+    TestData testData = new TestData();
 
     //유저 테스트 점수 순서 정렬을 위한 변수
     String[] dateTempArray;
@@ -78,7 +79,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         myPageName = (TextView) findViewById(R.id.myPageName);
         myPagePhoneNumber = (TextView) findViewById(R.id.myPagePhoneNumber);
 
-       showUserInfo();
+        showUserInfo();
 
         Calendar cal = new GregorianCalendar();
         mYear = cal.get(Calendar.YEAR);
@@ -91,16 +92,14 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         barChartGraph1(cavityLabelsList, cavityValuesList);
         barChartGraph2(periodontalLabelsList, periodontalValuesList);
     }
+
     //유저 테스트 점수 가져오기
-    void getPdTestScore(){
-        TestData testData = new TestData();
+    void getPdTestScore() {
         dateTempArray = testData.getpdDateTempArray();
         scoreTempArray = testData.getPdScoreTempArray();
 
-        for(int i = 2; i >=0; i--){
-            if(dateTempArray[i] == null)
-                return;
-            if(dateTempArray[i].equals("2020-0")){
+        for (int i = 2; i >= 0; i--) {
+            if (dateTempArray[i].equals("2020-0")) {
                 dateTempArray[i] = "";
             }
             cavityLabelsList.add(dateTempArray[i]);
@@ -109,16 +108,12 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     }
 
     //유저 테스트 점수 가져오기
-    void getCaTestScore(){
-
-        TestData testData = new TestData();
+    void getCaTestScore() {
         dateTempArray = testData.getCaDateTempArray();
         scoreTempArray = testData.getCaScoreTempArray();
 
-        for(int i = 2; i >=0; i--){
-            if(dateTempArray[i] == null)
-                return;
-            if(dateTempArray[i].equals("2020-0")){
+        for (int i = 2; i >= 0; i--) {
+            if (dateTempArray[i].equals("2020-00")) {
                 dateTempArray[i] = "";
             }
             cavityLabelsList.add(dateTempArray[i]);
@@ -127,51 +122,52 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     }
 
     //날짜 선택
-    void showDate(){
-        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener(){
-           @Override
-           public void onDateSet(DatePicker view, int year, int month, int dayOfMonth){
-               dDayCount.setText(getDday(year,month,dayOfMonth));
-           }
-        },mYear,mMonth,mDay);
+    void showDate() {
+        DatePickerDialog datePickerDialog = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                dDayCount.setText(getDday(year, month, dayOfMonth));
+            }
+        }, mYear, mMonth, mDay);
         datePickerDialog.show();
     }
+
     //Dday 날짜 구하기
-    private String getDday(int year, int month, int dayOfMonth){
+    private String getDday(int year, int month, int dayOfMonth) {
         final Calendar ddayCalender = Calendar.getInstance();
-        ddayCalender.set(year,month,dayOfMonth);
+        ddayCalender.set(year, month, dayOfMonth);
 
         final long dday = ddayCalender.getTimeInMillis() / ONE_DAY;
         final long today = Calendar.getInstance().getTimeInMillis() / ONE_DAY;
         long result = dday - today;
 
         String strFormat;
-        if(result > 0){
+        if (result > 0) {
             strFormat = "D-%d";
-        } else if(result == 0){
+        } else if (result == 0) {
             strFormat = "D-Day";
         } else {
             result *= -1;
             strFormat = "D+%d";
         }
 
-        String strCount = (String.format(strFormat,result));
+        String strCount = (String.format(strFormat, result));
         return strCount;
     }
 
     //막대그래프
-    private void barChartGraph1(ArrayList<String> labelList, ArrayList<Float> valList){
+    private void barChartGraph1(ArrayList<String> labelList, ArrayList<Float> valList) {
         ArrayList<BarEntry> entries = new ArrayList<>();
-        for(int i = 0; i < valList.size(); i++){
-            entries.add(new BarEntry((Float)valList.get(i), i));
+        for (int i = 0; i < valList.size(); i++) {
+            entries.add(new BarEntry((Float) valList.get(i), i));
         }
 
         ArrayList<String> labels = new ArrayList<String>();
-        for(int i = 0; i < labelList.size(); i++){
+        for (int i = 0; i < labelList.size(); i++) {
             labels.add((String) labelList.get(i));
         }
 
-        BarDataSet depenses = new BarDataSet (entries,"");
+        BarDataSet depenses = new BarDataSet(entries, "");
         depenses.setAxisDependency(YAxis.AxisDependency.RIGHT);
         barChart1.setDescription(" ");
 
@@ -179,44 +175,44 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         depenses.setColors(ColorTemplate.PASTEL_COLORS);
 
         barChart1.setData(data);
-        barChart1.animateXY(1000,1000);
+        barChart1.animateXY(1000, 1000);
         barChart1.invalidate();
     }
 
-    private void barChartGraph2(ArrayList<String> labelList, ArrayList<Float> valList){
+    private void barChartGraph2(ArrayList<String> labelList, ArrayList<Float> valList) {
         ArrayList<BarEntry> entries = new ArrayList<>();
-        for(int i = 0; i < valList.size(); i++){
+        for (int i = 0; i < valList.size(); i++) {
             entries.add(new BarEntry((Float) valList.get(i), i));
         }
 
         ArrayList<String> labels = new ArrayList<String>();
-        for(int i = 0; i < labelList.size(); i++){
+        for (int i = 0; i < labelList.size(); i++) {
             labels.add((String) labelList.get(i));
         }
 
-        BarDataSet depenses = new BarDataSet (entries,null);
+        BarDataSet depenses = new BarDataSet(entries, null);
         barChart2.setDescription(" ");
 
         BarData data = new BarData(labels, depenses);
         depenses.setColors(ColorTemplate.COLORFUL_COLORS);
 
         barChart2.setData(data);
-        barChart2.animateXY(5,20);
+        barChart2.animateXY(5, 20);
         barChart2.invalidate();
     }
 
-    private void showUserInfo(){
+    private void showUserInfo() {
         fireUser = fireAuth.getInstance().getCurrentUser();
         String email = fireUser.getEmail();
         myPageId.setText(email);
-        Log.d(TAG,"email = "+email);
+        Log.d(TAG, "email = " + email);
 
         fireDatabase.getInstance().collection("Users").whereEqualTo("id", email)
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot querySnapshot) {
-                        for (DocumentSnapshot docSnap : querySnapshot.getDocuments()){
+                        for (DocumentSnapshot docSnap : querySnapshot.getDocuments()) {
                             String name = docSnap.get("name").toString();
                             myPageName.setText(name);
 
@@ -228,7 +224,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MyPageActivity.this,"에러 발생.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MyPageActivity.this, "에러 발생.", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -238,7 +234,7 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         if (view == visitAlarm) {
             showDate();
-        } else if(view == teethCare){
+        } else if (view == teethCare) {
             Intent teethCareIntent = new Intent(getApplicationContext(), TeethCareActivity.class);
             startActivity(teethCareIntent);
         }
