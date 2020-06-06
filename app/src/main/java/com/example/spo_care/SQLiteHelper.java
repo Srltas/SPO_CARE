@@ -50,16 +50,16 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         double score1, score2;
 
         Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1;", null);
-        cursor1.moveToFirst();
 
+        cursor1.moveToFirst();
         date1 = cursor1.getString(0);
         score1 = cursor1.getFloat(1);
 
         Log.d(TAG,"updateCA 1 date = "+date1);
 
         Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 2;", null);
-        cursor2.moveToFirst();
 
+        cursor2.moveToFirst();
         date2 = cursor2.getString(0);
         score2 = cursor2.getFloat(1);
 
@@ -100,6 +100,7 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
 
         Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 1;", null);
 
+        cursor1.moveToFirst();
         date1 = cursor1.getString(0);
         score1 = cursor1.getFloat(1);
 
@@ -107,6 +108,7 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
 
         Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 2;", null);
 
+        cursor2.moveToFirst();
         date2 = cursor2.getString(0);
         score2 = cursor2.getFloat(1);
 
