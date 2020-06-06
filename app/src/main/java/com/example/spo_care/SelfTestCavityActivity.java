@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -48,6 +49,8 @@ public class SelfTestCavityActivity extends Activity {
     String email;
     String value;
     Integer testCounter;
+
+    private static final String TAG = "SelfTestCavityActivity";
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -99,7 +102,9 @@ public class SelfTestCavityActivity extends Activity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 String date = year + "-" + month;
+                Log.d(TAG,"date string = "+date);
                 sqLite.insertCA(date, total);
+                sqLite.printResult();
             }
         });
         alertadd.show();

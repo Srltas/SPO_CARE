@@ -1,10 +1,12 @@
 package com.example.spo_care;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +48,8 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
     int year, month;
 
     SQLiteHelper sqLite;
+
+    private static final String TAG = "SelfTestPeriodontalDiseaseActivity";
 
     @Override
     protected void onCreate(Bundle saveInstanceState) {
@@ -93,11 +97,14 @@ public class SelfTestPeriodontalDiseaseActivity extends Activity {
         alertadd.setView(selectResult(total));
         getDate();
         alertadd.setNegativeButton("확인", new DialogInterface.OnClickListener() {
+            @SuppressLint("LongLogTag")
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
                 String date = year + "-" + month;
+                Log.d(TAG,"date string = "+date);
                 sqLite.insertPD(date, total);
+                sqLite.printResult();
 
             }
         });

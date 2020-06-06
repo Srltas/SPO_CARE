@@ -4,10 +4,13 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 public class SQLiteHelper  extends SQLiteOpenHelper {
+
+    private static final String TAG = "SQLiteHelper";
 
     public SQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -15,15 +18,15 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE CA_TEST_RESULT (counter INTEGER PRIMARY KEY, date TEXT not null, score REAL)");
-        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(1, 2020-00, 0)");
-        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(2, 2020-00, 0)");
-        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(3, 2020-00, 0)");
+        db.execSQL("CREATE TABLE CA_TEST_RESULT (counter INTEGER PRIMARY KEY, date TEXT, score REAL);");
+        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(1, '2020-00', 0);");
+        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(2, '2020-00', 0);");
+        db.execSQL("INSERT INTO CA_TEST_RESULT VALUES(3, '2020-00', 0);");
 
-        db.execSQL("CREATE TABLE PD_TEST_RESULT (counter INTEGER PRIMARY KEY, date TEXT not null, score REAL)");
-        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(1, 2020-00, 0)");
-        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(2, 2020-00, 0)");
-        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(3, 2020-00, 0)");
+        db.execSQL("CREATE TABLE PD_TEST_RESULT (counter INTEGER PRIMARY KEY, date TEXT, score REAL);");
+        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(1, '2020-00', 0);");
+        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(2, '2020-00', 0);");
+        db.execSQL("INSERT INTO PD_TEST_RESULT VALUES(3, '2020-00', 0);");
     }
 
     @Override
@@ -36,39 +39,41 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
             updateCA();
         }
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE CA_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1");
+        db.execSQL("UPDATE CA_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1;");
     }
 
     private void updateCA(){
         SQLiteDatabase dbRead = getReadableDatabase();
         SQLiteDatabase dbWrite = getWritableDatabase();
 
-        String date1 = null, date2 = null;
-        double score1 = 0 , score2= 0 ;
+        String date1, date2;
+        double score1, score2;
 
-        dbRead.execSQL("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1");
+        Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1;", null);
+        cursor1.moveToFirst();
 
-        Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 1", null);
-        while (cursor1.isFirst()){
-          date1 = cursor1.getString(0);
-          score1 = cursor1.getDouble(1);
-        }
+        date1 = cursor1.getString(0);
+        score1 = cursor1.getFloat(1);
 
-        Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 2", null);
-        while (cursor2.isFirst()){
-            date2 = cursor2.getString(0);
-            score2 = cursor2.getDouble(1);
-        }
+        Log.d(TAG,"updateCA 1 date = "+date1);
 
-        dbWrite.execSQL("UPDATE CA_TEST_RESULT SET date='" + date1 + "', score=" + score1 + " WHERE COUNTER=2");
-        dbWrite.execSQL("UPDATE CA_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3");
+        Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM CA_TEST_RESULT WHERE counter = 2;", null);
+        cursor2.moveToFirst();
+
+        date2 = cursor2.getString(0);
+        score2 = cursor2.getFloat(1);
+
+        Log.d(TAG,"updateCA 2 date = "+date2);
+
+        dbWrite.execSQL("UPDATE CA_TEST_RESULT SET date='" + date1 + "', score=" + score1 + " WHERE COUNTER=2;");
+        dbWrite.execSQL("UPDATE CA_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3;");
     }
 
     public String checkCA() {
         SQLiteDatabase dbRead = getReadableDatabase();
         String checkDate = null;
 
-        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM CA_TEST_RESULT WHERE counter = 1",null);
+        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM CA_TEST_RESULT WHERE counter = 1;",null);
         while (cursor.moveToNext()){
             checkDate = cursor.getString(0);
         }
@@ -78,44 +83,44 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
 
 
     public void insertPD(String date, double score) {
-        if (!checkDP().equals(date)){
+        if (!checkPD().equals(date)){
             updatePD();
         }
 
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("UPDATE PD_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1");
+        db.execSQL("UPDATE PD_TEST_RESULT SET date='"+date+"', score="+score+" WHERE counter=1;");
     }
 
     private void updatePD(){
         SQLiteDatabase dbRead = getReadableDatabase();
         SQLiteDatabase dbWrite = getWritableDatabase();
 
-        String date1 = null, date2 = null;
-        double score1 = 0 , score2= 0 ;
+        String date1, date2;
+        double score1, score2;
 
-        dbRead.execSQL("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 1");
+        Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 1;", null);
 
-        Cursor cursor1 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 1", null);
-        while (cursor1.isFirst()){
-            date1 = cursor1.getString(0);
-            score1 = cursor1.getDouble(1);
-        }
+        date1 = cursor1.getString(0);
+        score1 = cursor1.getFloat(1);
 
-        Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 2", null);
-        while (cursor2.isFirst()){
-            date2 = cursor2.getString(0);
-            score2 = cursor2.getDouble(1);
-        }
+        Log.d(TAG,"updatePD 1 date = "+date1);
 
-        dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date1 + "', score=" + score1 + " WHERE COUNTER=2");
-        dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3");
+        Cursor cursor2 = dbRead.rawQuery("SELECT date, score FROM PD_TEST_RESULT WHERE counter = 2;", null);
+
+        date2 = cursor2.getString(0);
+        score2 = cursor2.getFloat(1);
+
+        Log.d(TAG,"updatePD 2 date = "+date2);
+
+        dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date1 + "', score=" + score1 + " WHERE COUNTER=2;");
+        dbWrite.execSQL("UPDATE PD_TEST_RESULT SET date='" + date2 + "', score=" + score2 + " WHERE COUNTER=3;");
     }
 
-    public String checkDP() {
+    public String checkPD() {
         SQLiteDatabase dbRead = getReadableDatabase();
         String checkDate = null;
 
-        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM DP_TEST_RESULT WHERE counter = 1",null);
+        Cursor cursor = dbRead.rawQuery("SELECT DATE FROM PD_TEST_RESULT WHERE counter = 1;",null);
         while (cursor.moveToNext()){
             checkDate = cursor.getString(0);
         }
@@ -126,49 +131,73 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         SQLiteDatabase db = getReadableDatabase();
         Cursor cursor, cursor1;
 
-        TestData testData = new TestData();
-        int i = 1;
-        int j = 2;
+        String CA1;
+        String CA2;
+        String CA3;
 
-        cursor = db.rawQuery("SELECT counter, date, score FROM CA_TEST_RESULT", null);
+        String PD1;
+        String PD2;
+        String PD3;
+
+        TestData testData = new TestData();
+        int i = 0;
+        int j = 0;
+
+        cursor = db.rawQuery("SELECT * FROM CA_TEST_RESULT;", null);
+
+
+
         while (cursor.moveToNext()) {
-            if (i == 1){
+            if (i == 0) {
+                cursor.moveToFirst();
                 testData.setCAcounter1(cursor.getInt(0));
                 testData.setCAdate1(cursor.getString(1));
                 testData.setCAscore1(cursor.getFloat(2));
+                CA1 = cursor.getInt(0) + " " + cursor.getString(1) + " " + cursor.getFloat(2);
+                Log.d(TAG, "db log ca1 = " + CA1);
                 i++;
-            } else if (i == 2){
+            } else if (i == 1) {
                 testData.setCAcounter2(cursor.getInt(0));
                 testData.setCAdate2(cursor.getString(1));
                 testData.setCAscore2(cursor.getFloat(2));
+                CA2 = cursor.getInt(0) + " " + cursor.getString(1) + " " + cursor.getFloat(2);
+                Log.d(TAG, "db log ca2 = " + CA2);
                 i++;
-            } else if (i == 3){
+            } else if (i == 2) {
                 testData.setCAcounter3(cursor.getInt(0));
                 testData.setCAdate3(cursor.getString(1));
                 testData.setCAscore3(cursor.getFloat(2));
-                i++;
-            } else {
-
+                CA3 = cursor.getInt(0) + " " + cursor.getString(1) + " " + cursor.getFloat(2);
+                Log.d(TAG, "db log ca3 = " + CA3);
             }
         }
 
-        cursor1 = db.rawQuery("SELECT counter, date, score FROM PD_TEST_RESULT", null);
+        cursor1 = db.rawQuery("SELECT * FROM PD_TEST_RESULT;", null);
+
+
+
         while (cursor1.moveToNext()){
-            if (i == 1){
-                testData.setPDcounter1(cursor.getInt(0));
-                testData.setPDdate1(cursor.getString(1));
-                testData.setPDscore1(cursor.getFloat(2));
-                i++;
-            } else if (i == 2){
-                testData.setPDcounter2(cursor.getInt(0));
-                testData.setPDdate2(cursor.getString(1));
-                testData.setPDscore2(cursor.getFloat(2));
-                i++;
-            } else if (i == 3){
-                testData.setPDcounter3(cursor.getInt(0));
-                testData.setPDdate3(cursor.getString(1));
-                testData.setPDscore3(cursor.getFloat(2));
-                i++;
+            if (j == 0){
+                cursor1.moveToFirst();
+                testData.setPDcounter1(cursor1.getInt(0));
+                testData.setPDdate1(cursor1.getString(1));
+                testData.setPDscore1(cursor1.getFloat(2));
+                PD1 = cursor1.getInt(0)+" "+cursor1.getString(1)+" "+cursor1.getFloat(2);
+                Log.d(TAG, "db log pd1 = "+PD1);
+                j++;
+            } else if (j == 1){
+                testData.setPDcounter2(cursor1.getInt(0));
+                testData.setPDdate2(cursor1.getString(1));
+                testData.setPDscore2(cursor1.getFloat(2));
+                PD2 = cursor1.getInt(0)+" "+cursor1.getString(1)+" "+cursor1.getFloat(2);
+                Log.d(TAG, "db log pd2 = "+PD2);
+                j++;
+            } else if (j == 2){
+                testData.setPDcounter3(cursor1.getInt(0));
+                testData.setPDdate3(cursor1.getString(1));
+                testData.setPDscore3(cursor1.getFloat(2));
+                PD3 = cursor1.getInt(0)+" "+cursor1.getString(1)+" "+cursor1.getFloat(2);
+                Log.d(TAG, "db log pd3 = " + PD3);
             }
         }
         return testData;
