@@ -8,9 +8,11 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
-public class SQLiteHelper  extends SQLiteOpenHelper {
+public class SQLiteHelper extends SQLiteOpenHelper {
 
     private static final String TAG = "SQLiteHelper";
+
+    static TestData testData = new TestData();
 
     public SQLiteHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -141,13 +143,10 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         String PD2;
         String PD3;
 
-        TestData testData = new TestData();
         int i = 0;
         int j = 0;
 
         cursor = db.rawQuery("SELECT * FROM CA_TEST_RESULT;", null);
-
-
 
         while (cursor.moveToNext()) {
             if (i == 0) {
@@ -175,8 +174,6 @@ public class SQLiteHelper  extends SQLiteOpenHelper {
         }
 
         cursor1 = db.rawQuery("SELECT * FROM PD_TEST_RESULT;", null);
-
-
 
         while (cursor1.moveToNext()){
             if (j == 0){

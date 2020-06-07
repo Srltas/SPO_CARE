@@ -191,7 +191,6 @@ public class TestData {
         this.PDscore3 = PDscore3;
     }
 
-
     public int getCAcounter1() {
         return CAcounter1;
     }
@@ -207,6 +206,7 @@ public class TestData {
     public void setCAcounter2(int CAcounter2) {
         this.CAcounter2 = CAcounter2;
     }
+
     public int getCAcounter3() {
         return CAcounter3;
     }

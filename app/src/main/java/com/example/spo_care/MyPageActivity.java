@@ -57,11 +57,13 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     ArrayList<Float> cavityValuesList = new ArrayList<Float>();
     ArrayList<String> periodontalLabelsList = new ArrayList<String>();
     ArrayList<Float> periodontalValuesList = new ArrayList<Float>();
-    TestData testData = new TestData();
 
     //유저 테스트 점수 순서 정렬을 위한 변수
     String[] dateTempArray = new String[3];
     float[] scoreTempArray = new float[3];
+
+    SQLiteHelper sqLite = new SQLiteHelper(this, "TestResult.db", null, 1);;
+    TestData testData;
 
     private static final String TAG = "MyPageActivity";
 
@@ -94,10 +96,15 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
 
         barChartGraph1(cavityLabelsList, cavityValuesList);
         barChartGraph2(periodontalLabelsList, periodontalValuesList);
+
+
     }
 
     //유저 테스트 점수 가져오기
     void getPdTestScore() {
+
+        TestData testData = sqLite.printResult();
+
         dateTempArray[0] = testData.getPDdate1();
         dateTempArray[1] = testData.getPDdate2();
         dateTempArray[2] = testData.getPDdate3();
@@ -123,6 +130,9 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
 
     //유저 테스트 점수 가져오기
     void getCaTestScore() {
+
+        TestData testData = sqLite.printResult();
+
         dateTempArray[0] = testData.getCAdate1();
         Log.d(TAG3,testData.getCAdate1()+"1");
         dateTempArray[1] = testData.getCAdate2();
