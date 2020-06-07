@@ -34,13 +34,6 @@
         android:background="@drawable/box_my_page"
         android:orientation="vertical">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="center"
-        android:src="@drawable/icon_my_page_user2"/>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

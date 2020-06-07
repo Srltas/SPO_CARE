@@ -41,6 +41,9 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     int y = 0, m = 0, d = 0;
     int mYear, mMonth, mDay;
 
+    String TAG2 = "AAAAAAAAAAAAAAA";
+    String TAG3 = "BBBBBBBBBBBBBBB";
+
     TextView myPageId;
     TextView myPageName;
     TextView myPagePhoneNumber;
@@ -57,8 +60,8 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     TestData testData = new TestData();
 
     //유저 테스트 점수 순서 정렬을 위한 변수
-    String[] dateTempArray;
-    float[] scoreTempArray;
+    String[] dateTempArray = new String[3];
+    float[] scoreTempArray = new float[3];
 
     private static final String TAG = "MyPageActivity";
 
@@ -95,13 +98,24 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
 
     //유저 테스트 점수 가져오기
     void getPdTestScore() {
-        dateTempArray = testData.getpdDateTempArray();
-        scoreTempArray = testData.getPdScoreTempArray();
+        dateTempArray[0] = testData.getPDdate1();
+        dateTempArray[1] = testData.getPDdate2();
+        dateTempArray[2] = testData.getPDdate3();
+
+        scoreTempArray[0] = testData.getPDscore1();
+        scoreTempArray[1] = testData.getPDscore2();
+        scoreTempArray[2] = testData.getPDscore3();
+
+       /* periodontalLabelsList.add(testData.getPDdate1());
+        periodontalLabelsList.add(testData.getPDdate2());
+        periodontalLabelsList.add(testData.getPDdate3());
+        periodontalValuesList.add(testData.getPDscore1());
+        periodontalValuesList.add(testData.getPDscore2());
+        periodontalValuesList.add(testData.getPDscore3());*/
 
         for (int i = 2; i >= 0; i--) {
-            if (dateTempArray[i].equals("2020-0")) {
-                dateTempArray[i] = "";
-            }
+            if(dateTempArray[i] == null)
+                continue;
             cavityLabelsList.add(dateTempArray[i]);
             cavityValuesList.add(scoreTempArray[i]);
         }
@@ -109,16 +123,32 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
 
     //유저 테스트 점수 가져오기
     void getCaTestScore() {
-        dateTempArray = testData.getCaDateTempArray();
-        scoreTempArray = testData.getCaScoreTempArray();
+        dateTempArray[0] = testData.getCAdate1();
+        Log.d(TAG3,testData.getCAdate1()+"1");
+        dateTempArray[1] = testData.getCAdate2();
+        Log.d(TAG3,testData.getCAdate2()+"2");
+        dateTempArray[2] = testData.getCAdate3();
+        Log.d(TAG3,testData.getCAdate3()+"3");
+
+        scoreTempArray[0] = testData.getCAscore1();
+        scoreTempArray[1] = testData.getCAscore2();
+        scoreTempArray[2] = testData.getCAscore3();
 
         for (int i = 2; i >= 0; i--) {
-            if (dateTempArray[i].equals("2020-00")) {
-                dateTempArray[i] = "";
-            }
+            Log.d(TAG2,dateTempArray[i]+ "" + i + "" + scoreTempArray[i]);
+            if(dateTempArray[i] == null)
+                continue;
             cavityLabelsList.add(dateTempArray[i]);
             cavityValuesList.add(scoreTempArray[i]);
         }
+
+
+       /* cavityLabelsList.add(testData.getCAdate1());
+        cavityLabelsList.add(testData.getCAdate2());
+        cavityLabelsList.add(testData.getCAdate3());
+        cavityValuesList.add(testData.getCAscore1());
+        cavityValuesList.add(testData.getCAscore2());
+        cavityValuesList.add(testData.getCAscore3());*/
     }
 
     //날짜 선택
