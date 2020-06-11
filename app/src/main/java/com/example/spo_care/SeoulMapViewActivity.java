@@ -23,7 +23,7 @@ public class SeoulMapViewActivity extends Activity implements MapView.POIItemEve
 
         mapView = new MapView(this);
 
-        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.mapViewer);
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
 
 
         mapViewContainer.addView(mapView);

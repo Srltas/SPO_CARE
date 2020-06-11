@@ -27,6 +27,17 @@ public class MapListActivity extends Activity implements View.OnClickListener {
         btnJeonbuk = (Button) findViewById(R.id.btnJeonbuk);
         btnJeju = (Button) findViewById(R.id.btnJeju);
         btnDankook2 = (Button) findViewById(R.id.btnDankook2);
+
+        btnSeoul.setOnClickListener(this);
+        btnWonju.setOnClickListener(this);
+        btnDankook1.setOnClickListener(this);
+        btnJeonnam.setOnClickListener(this);
+        btnBusan.setOnClickListener(this);
+        btnKyungpook.setOnClickListener(this);
+        btnGachon.setOnClickListener(this);
+        btnJeonbuk.setOnClickListener(this);
+        btnJeju.setOnClickListener(this);
+        btnDankook2.setOnClickListener(this);
     }
 
     @Override
