@@ -151,10 +151,7 @@ public class MapViewActivity extends Activity implements View.OnClickListener, M
 
     @Override
     public void onMapViewCenterPointMoved(MapView mapView, MapPoint mapPoint) {
-        mapView.setMapCenterPoint(mapPoint, true);
-        Log.d(TAG,"map view center point moved");
-        Log.d(TAG,"mapView = "+mapView);
-        Log.d(TAG,"mapPoint = "+mapPoint);
+
     }
 
     @Override

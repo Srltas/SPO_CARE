@@ -42,7 +42,17 @@
         <activity android:name=".TeethCareItemVideo"/>
         <activity android:name=".TeethCareActivity"/>
         <activity android:name=".TeethCareItemText"/>
-
+        <activity android:name=".SeoulMapViewActivity"/>
+        <activity android:name=".WonjuMapViewActivity"/>
+        <activity android:name=".DankookJukjeonMapViewActivity"/>
+        <activity android:name=".JeonnamMapViewActivity"/>
+        <activity android:name=".KyungpookMapViewActivity"/>
+        <activity android:name=".BusanMapViewActivity"/>
+        <activity android:name=".GachonMapViewActivity"/>
+        <activity android:name=".JeonbukMapViewActivity"/>
+        <activity android:name=".JejuMapViewActivity"/>
+        <activity android:name=".DankookMapViewActivity"/>
+        <activity android:name=".MapListActivity"/>
 
 
         <meta-data android:name="com.kakao.sdk.AppKey"
