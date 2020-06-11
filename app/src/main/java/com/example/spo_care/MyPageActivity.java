@@ -41,9 +41,6 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     int y = 0, m = 0, d = 0;
     int mYear, mMonth, mDay;
 
-    String TAG2 = "AAAAAAAAAAAAAAA";
-    String TAG3 = "BBBBBBBBBBBBBBB";
-
     TextView myPageId;
     TextView myPageName;
     TextView myPagePhoneNumber;
@@ -63,7 +60,6 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
     float[] scoreTempArray = new float[3];
 
     SQLiteHelper sqLite = new SQLiteHelper(this, "TestResult.db", null, 1);;
-    TestData testData;
 
     private static final String TAG = "MyPageActivity";
 
@@ -113,18 +109,11 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         scoreTempArray[1] = testData.getPDscore2();
         scoreTempArray[2] = testData.getPDscore3();
 
-       /* periodontalLabelsList.add(testData.getPDdate1());
-        periodontalLabelsList.add(testData.getPDdate2());
-        periodontalLabelsList.add(testData.getPDdate3());
-        periodontalValuesList.add(testData.getPDscore1());
-        periodontalValuesList.add(testData.getPDscore2());
-        periodontalValuesList.add(testData.getPDscore3());*/
-
-        for (int i = 2; i >= 0; i--) {
-            if(dateTempArray[i] == null)
-                continue;
-            cavityLabelsList.add(dateTempArray[i]);
-            cavityValuesList.add(scoreTempArray[i]);
+        for (int i = 0; i < 3; i++) {
+            if(!dateTempArray[i].equals("2020-00")){
+                periodontalLabelsList.add(dateTempArray[i]);
+                periodontalValuesList.add(scoreTempArray[i]);
+            }
         }
     }
 
@@ -134,31 +123,19 @@ public class MyPageActivity extends Activity implements View.OnClickListener {
         TestData testData = sqLite.printResult();
 
         dateTempArray[0] = testData.getCAdate1();
-        Log.d(TAG3,testData.getCAdate1()+"1");
         dateTempArray[1] = testData.getCAdate2();
-        Log.d(TAG3,testData.getCAdate2()+"2");
         dateTempArray[2] = testData.getCAdate3();
-        Log.d(TAG3,testData.getCAdate3()+"3");
 
         scoreTempArray[0] = testData.getCAscore1();
         scoreTempArray[1] = testData.getCAscore2();
         scoreTempArray[2] = testData.getCAscore3();
 
-        for (int i = 2; i >= 0; i--) {
-            Log.d(TAG2,dateTempArray[i]+ "" + i + "" + scoreTempArray[i]);
-            if(dateTempArray[i] == null)
-                continue;
-            cavityLabelsList.add(dateTempArray[i]);
-            cavityValuesList.add(scoreTempArray[i]);
+        for (int i = 0; i < 3; i++) {
+            if(!dateTempArray[i].equals("2020-00")){
+                cavityLabelsList.add(dateTempArray[i]);
+                cavityValuesList.add(scoreTempArray[i]);
+            }
         }
-
-
-       /* cavityLabelsList.add(testData.getCAdate1());
-        cavityLabelsList.add(testData.getCAdate2());
-        cavityLabelsList.add(testData.getCAdate3());
-        cavityValuesList.add(testData.getCAscore1());
-        cavityValuesList.add(testData.getCAscore2());
-        cavityValuesList.add(testData.getCAscore3());*/
     }
 
     //날짜 선택
