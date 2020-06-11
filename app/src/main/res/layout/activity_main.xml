@@ -21,6 +21,16 @@
             android:textColor="#ffffff"
             android:textSize="45sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="장애인을 위한 구강관리"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:layout_marginBottom="10dp"
+            />
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
