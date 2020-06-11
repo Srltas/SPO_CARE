@@ -113,6 +113,7 @@ public class MapViewActivity extends Activity implements View.OnClickListener, M
         if(view == btnSeoul){
             showLocation(seoul, "서울대학교치과병원");
             Log.d(TAG,"btn seoul active");
+            onMapViewCenterPointMoved(mapView, seoul);
         }
         if(view == btnWonju){
             showLocation(wonju,"강릉원주대학교치과병원");
@@ -150,7 +151,10 @@ public class MapViewActivity extends Activity implements View.OnClickListener, M
 
     @Override
     public void onMapViewCenterPointMoved(MapView mapView, MapPoint mapPoint) {
-
+        mapView.setMapCenterPoint(mapPoint, true);
+        Log.d(TAG,"map view center point moved");
+        Log.d(TAG,"mapView = "+mapView);
+        Log.d(TAG,"mapPoint = "+mapPoint);
     }
 
     @Override
