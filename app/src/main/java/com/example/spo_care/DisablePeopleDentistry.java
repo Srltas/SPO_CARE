@@ -20,7 +20,7 @@ public class DisablePeopleDentistry extends Activity {
         btnMapView.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent mapListIntent = new Intent(getApplicationContext(), MapListActivity.class);
+                Intent mapListIntent = new Intent(getApplicationContext(), GoogleMapActivity.class);
                 startActivity(mapListIntent);
             }
         });

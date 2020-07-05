@@ -20,39 +20,62 @@
         android:icon="@mipmap/ic_launcher_spocare"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_spocare_round"
-        android:supportsRtl="true"
-        android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
-        <activity android:name=".IntroActivity">
+        android:supportsRtl="true">
+
+        <activity android:name=".IntroActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"/>
-        <activity android:name=".BrainLesionsActivity"/>
-        <activity android:name=".DisablePeopleDentistry"/>
-        <activity android:name=".FindIdActivity"/>
-        <activity android:name=".FindPasswordActivity"/>
-        <activity android:name=".HearingImpairmentActivity"/>
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".MyPageActivity"/>
-        <activity android:name=".SelfTestActivity"/>
-        <activity android:name=".SelfTestCavityActivity"/>
-        <activity android:name=".SelfTestPeriodontalDiseaseActivity"/>
-        <activity android:name=".SignUpActivity"/>
-        <activity android:name=".TeethBrushTimerActivity"/>
-        <activity android:name=".TeethCareItemListActivity"/>
-        <activity android:name=".VisualImpairmentActivity"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".BrainLesionsActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".DisablePeopleDentistry"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".FindIdActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".FindPasswordActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".HearingImpairmentActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".MainActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".MyPageActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".SelfTestActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".SelfTestCavityActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".SelfTestPeriodontalDiseaseActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".SignUpActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".TeethBrushTimerActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".TeethCareItemListActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".VisualImpairmentActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
         <activity android:name=".VideoViewController"
             android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
-        <activity android:name=".MouthTraining"/>
-        <activity android:name=".MapViewActivity"/>
-        <activity android:name=".TeethCareItemVideo"/>
-        <activity android:name=".TeethCareActivity"/>
-        <activity android:name=".TeethCareItemText"/>
-        <activity android:name=".SeoulMapViewActivity"/>
-        <activity android:name=".WonjuMapViewActivity"/>
+        <activity android:name=".MouthTraining"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".MapViewActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".TeethCareItemVideo"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".TeethCareActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".TeethCareItemText"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".SeoulMapViewActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
+        <activity android:name=".WonjuMapViewActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light.NoActionBar"/>
         <activity android:name=".DankookJukjeonMapViewActivity"/>
         <activity android:name=".JeonnamMapViewActivity"/>
         <activity android:name=".KyungpookMapViewActivity"/>
@@ -62,6 +85,7 @@
         <activity android:name=".JejuMapViewActivity"/>
         <activity android:name=".DankookMapViewActivity"/>
         <activity android:name=".MapListActivity"/>
+        <activity android:name=".GoogleMapActivity"/>
 
         <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBCGqaUPzxBvweDHNWzoqFvnFytaXeSB8I"/>
         <uses-library android:name="org.apache.http.legacy" android:required="false"/>
