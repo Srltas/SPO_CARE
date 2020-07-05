@@ -5,7 +5,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         ndk{
-            abiFilters 'armeabi','arm-v8a'
+            abiFilters 'armeabi', 'arm-v7a'
         }
 
         applicationId "com.example.spo_care"
@@ -45,6 +45,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:21.2.1'
     testImplementation 'junit:junit:4.12'
     implementation files('libs/libDaumMapAndroid.jar')
+
+    implementation 'com.google.android.gms:play-services-location:16.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
     //막대그래프
     compile 'com.github.PhilJay:MPAndroidChart:v2.1.6'
     implementation files('libs\\YouTubeAndroidPlayerApi.jar')
